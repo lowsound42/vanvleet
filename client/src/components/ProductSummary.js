@@ -5,7 +5,7 @@ import React from 'react';
 class ProductSummary extends React.Component {
 
   state={
-    description:''
+    edit:''
   }
 
 	render() {
@@ -29,6 +29,7 @@ class ProductSummary extends React.Component {
           <h4>CATEGORIES</h4>
           <p>{this.props.categories}</p>
         </div>
+        <button>EDIT</button>
       </div>
       </>
     );
