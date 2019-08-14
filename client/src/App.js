@@ -7,9 +7,7 @@ import ProductSummary from './components/Inventory/ProductSummary.js'
 import LocationsId from './components/Locations/LocaionsId';
 
 class App extends React.Component {
-  componentDidMount() {
-    
-  }
+
   render(){
     return(
       <div>
