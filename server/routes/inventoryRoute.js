@@ -1,10 +1,11 @@
-route.get('/inventory/:id',(req, res)=> {
-  const itemId = req.params.id;
-  const item = data.find(item => item.id == itemId); //this is for the id specific
+const express = require("express");
+const router = express.Router();
+const inventoryData = require('../data/inventory.json');
 
-  if(item){
-    res.json(item);
-  } else {
-    res.json({message:'HTTP 404: Page Not Found'})
-  }
-});
+//express middleware config
+
+router.get('/', (req, res) => {
+  res.json(inventoryData);
+})
+
+module.exports = router;
