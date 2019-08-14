@@ -4,7 +4,8 @@ import {Link} from "react-router-dom";
 
 class Locations extends React.Component {
   render() {
-    return this.props.warehouseList.map(item => (
+
+    return this.props.list.map(item => (
       <div key={item.id} className="warehouseList">
         <div className="warehouseList__part--one">
           <div className="warehouseList__part--one__info">

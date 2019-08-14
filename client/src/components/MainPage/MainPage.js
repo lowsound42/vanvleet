@@ -10,16 +10,17 @@ componentDidMount() {
     this.getData();
   }
   getData = () => {
-    axios.get("http://localhost:8080/warehouses/").then(response => {
+    axios.get("http://localhost:8080/warehouse/").then(response => {
       console.log(response.data);
       this.setState({
-        list: response.data
+        warehouseList: response.data
       });
     });
   };
 
   render() {
     console.log(this.state.warehouseList)
+
     return (
       <div>
         <div>

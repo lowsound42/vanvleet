@@ -1,14 +1,16 @@
 const express = require("express");
-const cors = require('cors');
-const warehouseRoutes = require('./routes/warehouseRoutes.js');
-const inventoryRoute = require('./routes/inventoryRoute.js');
+var cors = require('cors')
+const inventoryRoute = require('./routes/inventoryRoute.js')
+const warehouseRoute = require('./routes/warehouseRoutes.js')
+
+
 const app = express();
 
-//express middleware config
-app.use(express.json());
 app.use(cors());
+app.use(express.json());
 
-app.use('/warehouses', warehouseRoutes);
 
+app.use('/inventory', inventoryRoute);
+app.use('/warehouse', warehouseRoute);
 
-app.listen(8080, () => console.log("Server is doing a thing..."));
+app.listen(8080, () => console.log("Bro, we chillin at port 8080..."));
