@@ -10,12 +10,12 @@ class App extends React.Component {
   render(){
     return(
       <div>
+        <AddInvenItem/>
         <Router>
           <Switch>
             <Route path='/inventory' component={Inventory} />
             <Route path='/inventory/:id' component/>
-          {/* Added AddInvenItem Instead of MainPage for Demo Display */}
-            <Route exact path='/' component={AddInvenItem} />
+            <Route exact path='/' component={MainPage} />
             <Route path='/warehouses' component= {Locations}/>
             {/* <Route path='/warehouses/:id' component/>
             <Route path='/inventory' component/>
