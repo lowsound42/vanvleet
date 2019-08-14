@@ -1,3 +1,5 @@
+@import "../scss/variable.scss";
+
 @font-face {
   font-family: "AvenirDemi";
   src: url("../GlobalFonts/AvenirNextProLT/Alternativefiles/Linotype-AvenirNextLTProDemi.ttf");
@@ -8,7 +10,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: space-between;
-  background-color: #323232;
+  background-color: $navigation-backround-fill;
   height: 80px;
   &__img-wrapper {
     display: flex;
