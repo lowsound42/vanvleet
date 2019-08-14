@@ -1,8 +1,7 @@
-//hello world
 import React from "react";
 import "./NavBar.scss";
 import logoInstock from "../../Assets/Logo/Logo-instock.svg";
-
+import {Link} from 'react-router-dom';
 
 class NavBar extends React.Component {
   render() {
@@ -18,10 +17,10 @@ class NavBar extends React.Component {
           </div>
           <div className="navbar-container__text-wrapper">
             <div className="navbar-container__text-wrapper__text">
-              Inventory
+              <Link to ='/inventory'>Inventory</Link>
             </div>
             <div className="navbar-container__text-wrapper__text">
-              Locations
+              <Link to ='/locations'>Locations</Link>
             </div>
           </div>
         </div>
