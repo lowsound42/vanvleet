@@ -1,0 +1,26 @@
+@import '../scss/fonts.scss';
+@import '../scss/variables.scss';
+@import '../scss/template.scss';
+
+@include mobile{
+.mainPage{
+  display: flex;
+  flex-direction: column;
+
+  &__header{
+    margin: 0 16px;
+    & h1{
+      @include fontSize(14px, normal, 22px);
+    }
+  }
+}
+};
+@include tablet{
+
+}
+@include tabletL{
+
+}
+@include desktop{
+
+}
