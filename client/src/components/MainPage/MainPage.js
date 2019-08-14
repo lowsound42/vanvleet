@@ -20,7 +20,7 @@ class MainPage extends React.Component {
   };
 
   render() {
-    console.log(this.state.warehouseList);
+
 
     return (
       <div className="mainPage">
