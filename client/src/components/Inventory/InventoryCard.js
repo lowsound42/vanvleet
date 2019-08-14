@@ -5,6 +5,13 @@ class InventoryCard extends React.Component {
     return(
       <>
         <p>Inventory Card</p>
+        <table>
+          <td>Name</td>
+          <td>Date</td>
+          <td>Location</td>
+          <td>Quantity</td>
+          <td>Status</td>
+        </table>
       </>
     )}
 }
