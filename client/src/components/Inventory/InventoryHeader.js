@@ -7,7 +7,7 @@ class InventoryHeader extends React.Component {
       <>
         <div className="Inventory__Header">
           <div className="Inventory__Header__Title">
-            <h1><Link to='/inventory'>Inventory</Link></h1>
+            <h1>Inventory</h1>
           </div>
           <div className="Inventory__Header__SearchBar">
             <form>
