@@ -1,13 +1,11 @@
-const express = require('express');
-const locations = require('../data/locations.json');
+const express = require("express");
 const router = express.Router();
+const warehouseData = require('../data/locations.json');
+
+//express middleware config
 
 router.get('/', (req, res) => {
-  res.status(201);
-  res.send(locations);
-});
+  res.json(warehouseData);
+})
 
 module.exports = router;
-
-
-
