@@ -4,7 +4,7 @@ import Locations from "../Locations/Locations.js";
 
 class MainPage extends React.Component {
   state = {
-    list: []
+    warehouseList: []
   };
 componentDidMount() {
     this.getData();
@@ -19,14 +19,14 @@ componentDidMount() {
   };
 
   render() {
-    console.log(this.state.list)
+    console.log(this.state.warehouseList)
     return (
       <div>
         <div>
           <h1>Locations</h1>
           <input type="text" name="search" placeholder="Search" />
         </div>
-        <Locations list={this.state.list} />
+        <Locations list={this.state.warehouseList} />
       </div>
     );
   }
