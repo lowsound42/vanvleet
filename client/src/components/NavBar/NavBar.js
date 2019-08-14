@@ -1,5 +1,5 @@
-import React from 'react'
-import logoInstock from "../../assets/Logo/Logo-instock.svg"
+import React from 'react';
+import logoInstock from "../../assets/Logo/Logo-instock.svg";
 import "./NavBar.scss";
 class NavBar extends React.Component {
     render () {
