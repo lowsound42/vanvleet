@@ -9,6 +9,7 @@ app.use(express.json());
 app.use(cors());
 
 app.use('/warehouses', warehouseRoutes);
+app.use('/inventory', inventoryRoute);
 
 
 app.listen(8080, () => console.log("Server is doing a thing..."));
