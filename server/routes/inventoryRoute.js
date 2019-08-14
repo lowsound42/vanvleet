@@ -1,9 +1,6 @@
-const express = require('express');
-const app = express();
-
-app.get('/inventory/:id',(req, res)=> {
+route.get('/inventory/:id',(req, res)=> {
   const itemId = req.params.id;
-  const item = data.find(item => item.id == itemId);//this is for the id specific
+  const item = data.find(item => item.id == itemId); //this is for the id specific
 
   if(item){
     res.json(item);
@@ -11,7 +8,3 @@ app.get('/inventory/:id',(req, res)=> {
     res.json({message:'HTTP 404: Page Not Found'})
   }
 });
-
-app.listen(8080,function(){
-  console.log('creating the server');
-})
