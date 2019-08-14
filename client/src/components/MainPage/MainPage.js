@@ -1,12 +1,13 @@
 import React from "react";
 import axios from "axios";
 import Locations from "../Locations/Locations.js";
+import "./MainPage.scss";
 
 class MainPage extends React.Component {
   state = {
     warehouseList: []
   };
-componentDidMount() {
+  componentDidMount() {
     this.getData();
   }
   getData = () => {
@@ -19,13 +20,27 @@ componentDidMount() {
   };
 
   render() {
-    console.log(this.state.warehouseList)
+
 
     return (
-      <div>
-        <div>
+      <div className="mainPage">
+        <div className="mainPage__header">
           <h1>Locations</h1>
           <input type="text" name="search" placeholder="Search" />
+        </div>
+        <div className="mainPage__labels">
+          <div className="mainPage__labels--one">
+            <label htmlFor="partOne">WAREHOUSE</label>
+          </div>
+          <div className="mainPage__labels--two">
+            <label htmlFor="partTwo">CONTACT</label>
+          </div>
+          <div className="mainPage__labels--three">
+            <label htmlFor="partThree">CONTACT INFORMATION</label>
+          </div>
+          <div className="mainPage__labels--four">
+            <label htmlFor="partFour">CATEGORIES</label>
+          </div>
         </div>
         <Locations list={this.state.warehouseList} />
       </div>
