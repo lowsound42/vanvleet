@@ -11,7 +11,3 @@ app.get('/inventory/:id',(req, res)=> {
     res.json({message:'HTTP 404: Page Not Found'})
   }
 });
-
-app.listen(8080,function(){
-  console.log('creating the server');
-})
