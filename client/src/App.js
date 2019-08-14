@@ -10,8 +10,6 @@ class App extends React.Component {
       <div>
         <Router>
           <Switch>
-            <Route path='/warehouses' component/>
-            <Route path='/warehouses/:id' component/>
             <Route exact path='/' component={MainPage} />
             <Route path='/warehouses' component= {Locations}/>
             {/* <Route path='/warehouses/:id' component/>
