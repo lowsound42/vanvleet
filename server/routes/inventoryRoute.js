@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
   res.json(inventoryData);
 })
 
-router.get('/inventory/:id', (req, res) => {
+router.get('/:id', (req, res) => {
   console.log(req.params.id);
   var product = inventoryData.filter(item => item.id === req.params.id)
   res.json(product);
