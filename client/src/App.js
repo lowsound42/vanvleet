@@ -4,6 +4,7 @@ import './App.css';
 import Inventory from'./components/Inventory/Inventory.js';
 import MainPage from './components/MainPage/MainPage.js';
 import ProductSummary from './components/Inventory/ProductSummary.js'
+import LocationsId from './components/Locations/LocaionsId';
 
 class App extends React.Component {
   componentDidMount() {
@@ -18,7 +19,7 @@ class App extends React.Component {
             <Route path='/inventory/:id' component={ProductSummary}/>
             <Route exact path='/' component={MainPage} />
             <Route path='/warehouses' component= {MainPage}/>
-            {/* <Route path='/warehouses/:id' component/> */}
+            <Route path='/warehouses/:id' component={LocationsId}/> 
           </Switch>
         </Router>
       </div>
