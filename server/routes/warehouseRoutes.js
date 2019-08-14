@@ -14,9 +14,19 @@ router.get('/:id', (req, res) => {
   res.json(warehouse);
 })
 
+
 router.post('/', (req, res) => {
   console.log(req.body);
+  if ((req.body.name)===undefined || (req.body.inventoryCategories)===undefined || (req.body.id) === undefined){
+    res.status(400);
+    res.send('try again bro');
+  } else {
+    res.status(201);
+    warehouseData.push(req.body);
+    res.json(warehouseData)
+  }
 })
+
 
 
 module.exports = router;

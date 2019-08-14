@@ -16,6 +16,14 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   console.log(req.body);
+  if ((req.body.name)===undefined || (req.body.city)===undefined || (req.body.quantity) === undefined){
+    res.status(400);
+    res.send('try again bro');
+  } else {
+    res.status(201);
+    inventoryData.push(req.body);
+    res.json(inventoryData)
+  }
 })
 
 
