@@ -4,13 +4,15 @@
   "description": "instock backend",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "Omar",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "react-router-dom": "^5.0.1",
     "react-switch": "^5.0.1",
     "uuid": "^3.3.2"
   }
