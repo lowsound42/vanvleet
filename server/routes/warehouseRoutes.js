@@ -14,5 +14,9 @@ router.get('/:id', (req, res) => {
   res.json(warehouse);
 })
 
+router.post('/', (req, res) => {
+  console.log(req.body);
+})
+
 
 module.exports = router;
