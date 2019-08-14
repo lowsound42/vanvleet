@@ -1,6 +1,5 @@
 //hello world
 import React from "react";
-import logoInstock from "../../assets/Logo/Logo-instock.svg";
 import "./NavBar.scss";
 class NavBar extends React.Component {
   render() {
@@ -10,7 +9,6 @@ class NavBar extends React.Component {
           <div className="navbar-container__img-wrapper">
             <img
               className="navbar-container__img-wrapper__img"
-              src={logoInstock}
               alt="logo instock"
             />
           </div>
