@@ -9,11 +9,12 @@ class NavBar extends React.Component {
       <>
         <div className="navbar-container">
           <div className="navbar-container__img-wrapper">
+          <Link to='/'>
             <img
               className="navbar-container__img-wrapper__img"
               src={logoInstock}
               alt="logo instock"
-            />
+            /></Link>
           </div>
           <div className="navbar-container__text-wrapper">
             <div className="navbar-container__text-wrapper__text">
