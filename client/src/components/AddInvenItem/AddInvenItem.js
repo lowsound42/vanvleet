@@ -26,7 +26,7 @@ handleChange(checked) {
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">COUNTRY</div>
-                    <select className="add-inventory-item-form__wrapper__input-box__input-text">
+                    <select className="add-inventory-item-form__wrapper__input-box__input-text--select">
                     <option value="canada">Canada</option>
                     <option value="korea">Korea</option>
                     </select>

@@ -27,8 +27,19 @@
                 padding-right: 16px;
                 height: 48px;
                 width: 255px;
-                border: 1px solid #AFAFAF;
+                border: 1px solid #E1E1E1;
                 border-radius: 4px;
+                background-color: #FAFAFA;
+            }
+            &__input-text--select {
+                padding-left: 16px;
+                font-size: 20px;
+                font-family: 'AvenirNormal';
+                height: 48px;
+                width: 288px;
+                 border: 1px solid #E1E1E1;
+                 background-color: #FAFAFA;
+                  border-radius: 4px;
             }
             &__input-text::placeholder {
                 color: black;
@@ -47,7 +58,7 @@
                 font-size: 20px;
                 height: 80px;
                 width: 280px;
-                border: 1px solid #AFAFAF;
+                border: 1px solid #E1E1E1;
                 border-radius: 4px;
                 resize: none;
             }
@@ -59,13 +70,18 @@
         }
     }
     &__button-wrapper {
+        margin-top: 32px;
         &__save {
             width: 285px;
-            background-color: white;
+            background-color: #002F5F;
+            color: white;
+            border-radius: 4px;
         }
         &__cancel {
             width: 285px;
             background-color: white;
+            color: #002F5F;
+            border-radius: 4px;
         }
     }
 }
