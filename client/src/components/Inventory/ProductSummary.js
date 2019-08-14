@@ -1,17 +1,13 @@
 import React from 'react';
+import Navbar from '../NavBar/NavBar'
 
 //this is the product factory that pumps out products based on data passed through props
 
 class ProductSummary extends React.Component {
 
-  state = {
-    product: []
-  }
-  if(productId != undefined){
-    let product = {};
-  }
+  state = {}
+  
 	render() {
-    let {product} = this.state;
 		return (
       <>
       <Navbar/>
