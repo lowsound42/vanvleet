@@ -10,17 +10,179 @@
   &__header{
     margin: 0 16px;
     & h1{
-      @include fontSize(14px, normal, 22px);
+      @include fontSize(24px, normal, 32px);
+      font-family: 'AvenirBold';
+      margin: 32px 0 0 0;
     }
+    & input {
+      margin-top:16px;
+      margin-bottom:32px;
+      width:260px;
+      height: 40px;
+      background-image: url('./Icons/SVG/Icon-search.svg');
+      background-repeat: no-repeat;
+      background-color:$text-field-background-fill;
+      background-position: 10px;
+      padding:0 0 0 30px;
+      border-radius: 5px ;
+      border: 1px solid $text-field-border;
+      box-sizing: border-box;
+    }
+  }
+  & label{
+    display: none;
   }
 }
 };
 @include tablet{
-
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+  
+    &__header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 48px 24px 48px 24px;
+      & h1{
+        color: $paragraph-text;
+        margin: 0;
+        @include fontSize(36px, normal, 44px);
+        font-family: 'AvenirBold';
+      }
+      & input {
+        width:260px;
+        height: 40px;
+        background-image: url('./Icons/SVG/Icon-search.svg');
+        background-repeat: no-repeat;
+        background-color:$text-field-background-fill;
+        background-position: 10px;
+        padding:0 0 0 30px;
+        border-radius: 5px ;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+    & label{
+      display: none;
+    }
+  }
 }
 @include tabletL{
-
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+  
+    &__header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 24px;
+      & h1{
+        color: $paragraph-text;
+        margin: 48px 0;
+        @include fontSize(36px, normal, 44px);
+        font-family: 'AvenirBold';
+      }
+      & input {
+        margin: 40px 0 48px 0;
+        width:260px;
+        height: 40px;
+        background-image: url('./Icons/SVG/Icon-search.svg');
+        background-repeat: no-repeat;
+        background-color:$text-field-background-fill;
+        background-position: 10px;
+        padding:0 0 0 30px;
+        border-radius: 5px ;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+    &__labels{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin: 0 24px;
+      @include fontSize(12px, normal, 20px);
+      font-family: 'AvenirBold';
+      color:$text-label-style;
+      &--one{
+        width:25%;
+      }
+      &--two{
+        box-sizing: border-box;
+        padding-left: 30px;
+        width:25%;
+      }
+      &--three{
+        box-sizing: border-box;
+        padding-left: 25px;
+        width:25%;
+      }
+      &--four{
+        box-sizing: border-box;
+        padding-left: 20px;
+        width:25%;
+      }
+    }
+  }
 }
 @include desktop{
-
+  .mainPage{
+    display: flex;
+    flex-direction: column;
+  
+    &__header{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin: 0 180px;
+      & h1{
+        color: $paragraph-text;
+        margin: 48px 0;
+        @include fontSize(36px, normal, 44px);
+        font-family: 'AvenirBold';
+      }
+      & input {
+        margin: 40px 0 48px 0;
+        width:260px;
+        height: 40px;
+        background-image: url('./Icons/SVG/Icon-search.svg');
+        background-repeat: no-repeat;
+        background-color:$text-field-background-fill;
+        background-position: 10px;
+        padding:0 0 0 30px;
+        border-radius: 5px ;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+    &__labels{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      margin: 0 180px;
+      @include fontSize(12px, normal, 20px);
+      font-family: 'AvenirBold';
+      color:$text-label-style;
+      &--one{
+        width:25%;
+      }
+      &--two{
+        box-sizing: border-box;
+        padding-left: 30px;
+        width:25%;
+      }
+      &--three{
+        box-sizing: border-box;
+        padding-left: 25px;
+        width:25%;
+      }
+      &--four{
+        box-sizing: border-box;
+        padding-left: 20px;
+        width:25%;
+      }
+    }
+  }
 }
