@@ -6,6 +6,9 @@ import MainPage from './components/MainPage/MainPage.js';
 import ProductSummary from './components/Inventory/ProductSummary.js'
 
 class App extends React.Component {
+  componentDidMount() {
+    
+  }
   render(){
     return(
       <div>

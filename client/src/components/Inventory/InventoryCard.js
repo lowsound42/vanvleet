@@ -1,16 +1,17 @@
 import React from 'react';
 
 class InventoryCard extends React.Component {
+  
   render(){
     return(
       <>
       <div className="InventoryCard">
           <table>
-            <td>Name</td>
-            <td>Date</td>
-            <td>Location</td>
-            <td>Quantity</td>
-            <td>Status</td>
+            <td>{this.props.name}</td>
+            <td>{this.props.lastOrdered}</td>
+            <td>{this.props.location}</td>
+            <td>{this.props.quantity}</td>
+            <td>{this.props.isInstock}</td>
           </table>
         </div>
       </>
