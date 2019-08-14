@@ -1,6 +1,7 @@
 import React from "react";
 import axios from "axios";
 import Locations from "../Locations/Locations.js";
+import NavBar from "../NavBar/NavBar";
 import "./MainPage.scss";
 
 class MainPage extends React.Component {
@@ -23,6 +24,8 @@ class MainPage extends React.Component {
 
 
     return (
+      <>
+      <NavBar/>
       <div className="mainPage">
         <div className="mainPage__header">
           <h1>Locations</h1>
@@ -44,6 +47,7 @@ class MainPage extends React.Component {
         </div>
         <Locations list={this.state.warehouseList} />
       </div>
+      </>
     );
   }
 }

@@ -8,7 +8,6 @@ class Locations extends React.Component {
 
     return( 
       <>
-      <NavBar/>
       <div>{this.props.list.map(item => (
       <div key={item.id} className="warehouseList">
 
