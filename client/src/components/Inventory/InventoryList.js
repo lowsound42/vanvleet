@@ -3,10 +3,11 @@ import InventoryCard from './InventoryCard.js';
 
 class InventoryList extends React.Component {
   render(){
+    let inventoryItems = this.props.inventoryItems;
+    console.log(this.props.inventoryItems);
     return(
       <>
         <p>this is the inventory list</p>
-        <p>hello {this.props.test}</p>
         <div className="InventoryList__Headers">
           <table>
             <tr>
@@ -18,11 +19,14 @@ class InventoryList extends React.Component {
             </tr>
           </table>
         </div>
-        <InventoryCard />
-        <InventoryCard />
-        <InventoryCard />
-        <InventoryCard />
-        <InventoryCard />
+        {inventoryItems.map((inventoryItems) => 
+          <InventoryCard name={inventoryItems.name}
+            lastOrdered={inventoryItems.lastOrdered}
+            location={inventoryItems.location}
+            quantity={inventoryItems.quantity}
+            isInstock={inventoryItems.isInstock} />  
+        )}
+        
       </>
     )}
 }

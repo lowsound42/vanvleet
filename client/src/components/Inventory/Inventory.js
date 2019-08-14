@@ -1,19 +1,31 @@
 import React from 'react';
 import InventoryHeader from './InventoryHeader.js';
 import InventoryList from './InventoryList.js';
-import DummyData from './DummyData.json';
+//import DummyData from './DummyData.json';
+import axios from 'axios';
 
 class Inventory extends React.Component {
-  
-  
-  testVar = "test var";
+  state = {
+    inventoryItems : []
+  }
+  componentDidMount() {
+    axios.get('http://localhost:8080/inventory/')
+    .then(response => {
+      console.log(response);
+      this.setState({
+        inventoryItems : response.data
+      })
+    })
+    .catch(error => {
+      console.log(error);
+    })
+  };
   render(){
+    console.log(this.state.inventoryItems);
     return(
       <>
-        {console.log(DummyData)}
-        <p>{this.testVar}</p>
         <InventoryHeader />
-        <InventoryList test={this.testVar} />
+        <InventoryList inventoryItems={this.state.inventoryItems} />
       </>
     )}
 }

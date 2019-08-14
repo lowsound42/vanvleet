@@ -6,6 +6,9 @@ import MainPage from './components/MainPage/MainPage.js';
 import Locations from './components/Locations/Locations.js';
 
 class App extends React.Component {
+  componentDidMount() {
+    
+  }
   render(){
     return(
       <div>
