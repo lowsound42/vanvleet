@@ -7,9 +7,7 @@ class ProductSummary extends React.Component {
   state = {
     product: []
   }
-  if(productId != undefined){
-    let product = {};
-  }
+
 	render() {
     let {product} = this.state;
 		return (

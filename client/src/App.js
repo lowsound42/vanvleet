@@ -5,9 +5,7 @@ import Inventory from'./components/Inventory/Inventory.js';
 import MainPage from './components/MainPage/MainPage.js';
 
 class App extends React.Component {
-  componentDidMount() {
-    
-  }
+
   render(){
     return(
       <div>
