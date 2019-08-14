@@ -7,10 +7,13 @@ import Locations from './components/Locations/Locations.js';
 import AddInvenItem from './components/AddInvenItem/AddInvenItem.js';
 
 class App extends React.Component {
+  componentDidMount() {
+    
+  }
   render(){
     return(
       <div>
-        <AddInvenItem/>
+      
         <Router>
           <Switch>
             <Route path='/inventory' component={Inventory} />
@@ -20,6 +23,9 @@ class App extends React.Component {
             {/* <Route path='/warehouses/:id' component/>
             <Route path='/inventory' component/>
             <Route path='/inventory/:id' component/> */}
+            <Route exact path='/' component={MainPage} />
+            <Route path='/warehouses' component= {MainPage}/>
+            {/* <Route path='/warehouses/:id' component/> */}
           </Switch>
         </Router>
       </div>

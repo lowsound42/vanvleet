@@ -1,11 +1,14 @@
 import React from "react";
+import NavBar from '../NavBar/NavBar';
 import arrowIcon from "./Icons/SVG/Icon-arrow-right.svg";
 import {Link} from "react-router-dom";
 
 class Locations extends React.Component {
   render() {
-
-    return this.props.list.map(item => (
+    return( 
+      <>
+      <NavBar/>
+      <div>{this.props.list.map(item => (
       <div key={item.id} className="warehouseList">
         <div className="warehouseList__part--one">
           <div className="warehouseList__part--one__info">
@@ -30,7 +33,10 @@ class Locations extends React.Component {
           <p>{item.inventoryCategories}</p>
         </div>
       </div>
-    ));
+    ))}
+    </div>
+    </>
+    )
   }
 }
 
