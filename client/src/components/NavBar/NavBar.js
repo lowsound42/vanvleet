@@ -21,7 +21,7 @@ class NavBar extends React.Component {
               <Link to ='/inventory'>Inventory</Link>
             </div>
             <div className="navbar-container__text-wrapper__text">
-              <Link to ='/locations'>Locations</Link>
+              <Link to ='/'>Locations</Link>
             </div>
           </div>
         </div>
