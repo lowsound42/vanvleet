@@ -1,5 +1,6 @@
 import React from "react"
 import Switch from "react-switch";
+import "./AddInvenModal.scss";
 
 class Modal extends React.Component {
     state = { checked : false }
