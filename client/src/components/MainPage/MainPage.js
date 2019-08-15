@@ -4,7 +4,7 @@ import Locations from "../Locations/Locations.js";
 import NavBar from "../NavBar/NavBar";
 import "./MainPage.scss";
 
-class MainPage extends React.Componen t {
+class MainPage extends React.Component {
   state = {
     warehouseList: []
   };

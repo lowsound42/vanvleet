@@ -5,23 +5,36 @@ import NavBar from '../NavBar/NavBar';
 class LocationId extends React.Component{
 
   state= {
-    item: {}
-    
+    items: {},
+    address: {},
+    contact: {}
   }
- 
-getDataById = () => {
-  axios.get(`http://localhost:8080/warehouses/${this.props.match.params.id}`)
+
+// getData = () => {
+//   axios.get(`http://localhost:8080/warehouses/`)
+//   .then(response => {
+//     console.log(response.data)
+//     var product = response.data;
+//     this.setState({
+//       items: product
+//     });
+//   })
+// }
+  componentDidMount(){
+  axios.get(`http://localhost:8080/warehouse/${this.props.match.params.id}`)
   .then(response => {
-    console.log(response.data)
-    var product = response.data;
+    console.log(this.props.match.params)
+    console.log(response.data[0])
+    var product = response.data[0];
+    console.log(product.address.street)
     this.setState({
-      item: product
+      items: product,
+      address: product.address,
+      contact: product.contact
     });
   })
-}
-  componentDidMount(){
- this.getDataById();}
- 
+
+ } 
     // const { match } = this.props;
     // const itemId = match.params.id;
     //console.log(this.props.match.params)
@@ -40,18 +53,18 @@ getDataById = () => {
 
   render(){
     // const {item} = this.props
-    // console.log("this: "+item);
+    console.log(this.state)
     return(
       <>
       <NavBar />
       <div>
       <div className='item'>
         <div className='item__details'>
-          <h4 className='item__details--header'>{this.state.item.name}</h4>
+          <h4 className='item__details--header'>{this.state.items.name}</h4>
           <h4 className='item__details--header'>ADDRESS</h4>
-          <p className='item__details--info'>{this.state.item.address}</p>
+          <p className='item__details--info'>{this.state.address.street} {this.state.address.city}</p>
           <h4 className='item__details--header'>CONTACT</h4>
-          <p className='item__details--info'>{this.state.item.contact}</p>
+          <p className='item__details--info'>{this.state.contact.name}</p>
         </div>
         <button className='item__button'>EDIT</button>
       </div>

@@ -19,7 +19,7 @@ class App extends React.Component {
             <Route path='/inventory' component={Inventory} />
             <Route path='/inventory/:id' component={ProductSummary}/>
             <Route exact path='/' component={MainPage} />
-            <Route path='/warehouses/' component= {MainPage}/>
+            <Route path='/warehouses/' exact component= {MainPage}/>
             <Route path='/warehouses/:id' exact component={LocationId}/>
           </Switch>
         </Router>

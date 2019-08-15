@@ -21,7 +21,7 @@ class Locations extends React.Component {
             </p>
           </div>
           <div className="warehouseList__part--one__icon">
-            <Link to={item.id}>
+            <Link to={`/warehouses/${item.id}`}>
               <img src={arrowIcon} alt="link" />
             </Link>
           </div>

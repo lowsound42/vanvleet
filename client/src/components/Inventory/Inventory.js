@@ -5,6 +5,7 @@ import InventoryList from './InventoryList.js';
 import axios from 'axios';
 import DummyData from './DummyData.json';
 import NavBar from '../NavBar/NavBar';
+import AddInvenItem from '../AddInvenItem/AddInvenItem';
 
 class Inventory extends React.Component {
   state = {
@@ -30,6 +31,7 @@ class Inventory extends React.Component {
         <p>{this.testVar}</p>
         <InventoryHeader />
         <InventoryList inventoryItems={this.state.inventoryItems} />
+        <AddInvenItem />
       </>
     )}
 }
