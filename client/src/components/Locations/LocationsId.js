@@ -33,26 +33,10 @@ class LocationId extends React.Component{
       contact: product.contact
     });
   })
-
  } 
-    // const { match } = this.props;
-    // const itemId = match.params.id;
-    //console.log(this.props.match.params)
 
-    // console.log(this.props.match.params);
-    // console.log(itemId);
-
-    // if(itemId !== undefined){
-    //     let item = {};
-
-   
-    // }
-  //}
-
-  // componentDidMount(){}
 
   render(){
-    // const {item} = this.props
     console.log(this.state)
     return(
       <>
@@ -62,9 +46,12 @@ class LocationId extends React.Component{
         <div className='item__details'>
           <h4 className='item__details--header'>{this.state.items.name}</h4>
           <h4 className='item__details--header'>ADDRESS</h4>
-          <p className='item__details--info'>{this.state.address.street} {this.state.address.city}</p>
+          <p className='item__details--info'>{this.state.address.street} {this.state.address.suiteNum}</p>
+          <p>{this.state.address.city},{this.state.address.province}</p>
+          <p>{this.state.address.postal}  CA</p>
           <h4 className='item__details--header'>CONTACT</h4>
-          <p className='item__details--info'>{this.state.contact.name}</p>
+          <p className='item__details--info'>{this.state.contact.name}  {this.state.contact.title}</p>
+          <p>{this.state.contact.phone}  {this.state.contact.email}</p>
         </div>
         <button className='item__button'>EDIT</button>
       </div>
