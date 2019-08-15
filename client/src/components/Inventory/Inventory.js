@@ -9,7 +9,7 @@ import AddInvenItem from '../AddInvenItem/AddInvenItem';
 
 class Inventory extends React.Component {
   state = {
-    inventoryItems : []
+    inventoryItems : [],
   }
   componentDidMount() {
     axios.get('http://localhost:8080/inventory/')
@@ -24,7 +24,6 @@ class Inventory extends React.Component {
     })
   };
   render(){
-    console.log(this.state.inventoryItems);
     return(
       <>
         <NavBar />
