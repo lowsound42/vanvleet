@@ -1,6 +1,8 @@
 @import "../scss/fonts.scss";
 
 .add-inventory-item-form {
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 100%;
     padding-left: 16px;
@@ -71,6 +73,8 @@
     }
     &__button-wrapper {
         margin-top: 32px;
+        display: flex;
+        flex-direction: column;
         &__save {
             font-family: 'AvenirDemi';
             width: 285px;
@@ -96,10 +100,3 @@
     }
 }
 
-@media screen and (min-width:768px) {
-  .add-inventory-item-form {
-      width: 576px;
-      height: 624px;
-  }
-
-}
