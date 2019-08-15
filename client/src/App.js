@@ -4,7 +4,7 @@ import './App.css';
 import Inventory from'./components/Inventory/Inventory.js';
 import MainPage from './components/MainPage/MainPage.js';
 import ProductSummary from './components/Inventory/ProductSummary.js'
-import LocationsId from './components/Locations/LocaionsId';
+import LocationsId from './components/Locations/LocationsId';
 
 class App extends React.Component {
 
