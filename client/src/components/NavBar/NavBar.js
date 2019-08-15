@@ -1,6 +1,6 @@
 import React from "react";
 import "./NavBar.scss";
-import logoInstock from "../../Assets/Logo/Logo-instock.svg";
+import logoInstock from "../../assets/Logo/Logo-instock.svg";
 import {Link} from 'react-router-dom';
 
 class NavBar extends React.Component {
