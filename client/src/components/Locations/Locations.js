@@ -40,7 +40,7 @@ class Locations extends React.Component {
           <div id="partFour" className="warehouseList__part--four">
             <p>{item.inventoryCategories}</p>
             <div className="warehouseList__part--four__icon">
-              <Link to={item}>
+              <Link to={`/warehouses/${item.id}`}>
                 <img src={arrowIcon} alt="link" />
               </Link>
             </div>
