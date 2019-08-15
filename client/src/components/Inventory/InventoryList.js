@@ -4,7 +4,6 @@ import InventoryCard from './InventoryCard.js';
 class InventoryList extends React.Component {
   render(){
     let inventoryItems = this.props.inventoryItems;
-    console.log(this.props.inventoryItems);
     return(
       <>
         <p>this is the inventory list</p>
