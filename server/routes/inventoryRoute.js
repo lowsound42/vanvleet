@@ -26,5 +26,10 @@ router.post('/', (req, res) => {
   }
 })
 
+router.delete('/:id', (req,res) => {
+  console.log(req.params.id);
+  var product = inventoryData.filter(item => item.id != req.params.id)
+  res.json(product);
+})
 
 module.exports = router;
