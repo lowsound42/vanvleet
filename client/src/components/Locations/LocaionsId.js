@@ -7,6 +7,8 @@ class LocationsId extends React.Component{
     return(
       <>
         <NavBar />
+        <>
+        </>
       </>
     )
   }
