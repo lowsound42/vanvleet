@@ -1,25 +1,23 @@
 import React from 'react';
 import InventoryCard from './InventoryCard.js';
+import './Inventory.scss';
 
 class InventoryList extends React.Component {
   render(){
     let inventoryItems = this.props.inventoryItems;
     return(
       <>
-        <p>this is the inventory list</p>
         <div className="InventoryList__Headers">
-          <table>
-            <tr>
-              <td>ITEM</td>
-              <td>LAST ORDERED</td>
-              <td>LOCATION</td>
-              <td>QUANTITY</td>
-              <td>STATUS</td>
-            </tr>
-          </table>
+              <div>ITEM</div>
+              <div>LAST ORDERED</div>
+              <div>LOCATION</div>
+              <div>QUANTITY</div>
+              <div>STATUS</div>
         </div>
         {inventoryItems.map((inventoryItems) => 
-          <InventoryCard name={inventoryItems.name}
+          <InventoryCard key={inventoryItems.id}
+          description={inventoryItems.description}
+          name={inventoryItems.name}
             lastOrdered={inventoryItems.lastOrdered}
             location={inventoryItems.location}
             quantity={inventoryItems.quantity}

@@ -11,7 +11,7 @@ class InventoryHeader extends React.Component {
           </div>
           <div className="Inventory__Header__SearchBar">
             <form>
-              <input type="text" name="ItemSearch" id="ItemSearch" />
+              <input type="text" name="ItemSearch" id="ItemSearch" placeholder="search here"/>
             </form>
           </div>
         </div>
