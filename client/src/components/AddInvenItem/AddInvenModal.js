@@ -10,7 +10,7 @@ class Modal extends React.Component {
     }
     render () {
         return (
-                <form className="add-inventory-item-form">
+                <form className="add-inventory-item-form" name="newInventoryForm" onsubmit="" method="post">
             <div className="add-inventory-item-form__title">Create New</div>
             <div className="add-inventory-item-form__wrapper">
                 <div className="add-inventory-item-form__wrapper__input-box">
