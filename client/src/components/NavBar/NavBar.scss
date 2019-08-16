@@ -1,9 +1,5 @@
-@import "../scss/variable.scss";
-
-@font-face {
-  font-family: "AvenirDemi";
-  src: url("../GlobalFonts/AvenirNextProLT/Alternativefiles/Linotype-AvenirNextLTProDemi.ttf");
-}
+@import "../scss/variables.scss";
+@import "../scss/fonts.scss";
 
 .navbar-container {
   display: flex;
@@ -76,6 +72,7 @@
     }
   }
 }
+
 @media screen and (min-width: 1440px) {
   .navbar-container {
     padding-left: 180px;

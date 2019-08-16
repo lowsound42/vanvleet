@@ -1,0 +1,383 @@
+@import '../scss/fonts.scss';
+@import '../scss/variables.scss';
+@import '../scss/template.scss';
+
+
+@include mobile{
+  .warehouseList{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 16px;
+    border-bottom: 1px solid $text-label-style;
+    &:last-of-type{
+      border: none;
+    }
+    &__part--one{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 10px;
+      margin-bottom: 8px;
+      &__info{
+        & h4{        
+          font-family: 'AvenirDemi';
+          color: $paragraph-text;
+          @include fontSize(13px, normal, 18px);
+          margin:0;
+        }
+        & p{        
+          font-family: 'AvenirNormal';
+          color: $paragraph-text;
+          @include fontSize(13px, normal, 18px);
+          margin:0;
+        }
+      }
+      &__icon{
+        & a{
+          height:20px;
+          width: 20px;
+        }
+      }
+    }
+    &__part--two{
+      margin-bottom: 8px;
+      
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(13px, normal, 18px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirItalic';
+        color: $paragraph-text;
+        @include fontSize(13px, normal, 18px);
+        margin:0;
+      }
+    }
+    &__part--three{
+      margin-bottom: 8px;
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(13px, normal, 18px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(13px, normal, 18px);
+        margin:0;
+      }
+    }
+    &__part--four{
+      
+      margin-bottom: 24px;
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(13px, normal, 18px);
+        margin:0;
+      }
+      &__icon{
+        display: none;
+      }
+    }
+  }
+}
+@include tablet{
+  .warehouseList{
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 24px;
+    border-bottom: 1px solid $text-label-style;
+    &:last-of-type{
+      border: none;
+    }
+    &__part--one{
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 20px;
+      margin-bottom: 32px;
+      &__info{
+        & h4{        
+          font-family: 'AvenirDemi';
+          color: $paragraph-text;
+          @include fontSize(16px, normal, 24px);
+          margin:0;
+        }
+        & p{        
+          font-family: 'AvenirNormal';
+          color: $paragraph-text;
+          @include fontSize(14px, normal, 22px);
+          margin:0;
+        }
+      }
+      &__icon{
+        & a{
+          height:20px;
+          width: 20px;
+        }
+      }
+    }
+    &--align{
+      display: flex;
+      flex-flow: row nowrap;
+      margin-top:5px;
+      margin-bottom:24px;
+      justify-content: space-around;
+
+    }
+    &__part--two{
+      margin-bottom: 8px;
+      width:33%;
+      
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirItalic';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--three{
+      margin-bottom: 8px;
+      width:33%;
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--four{
+      margin-bottom: 24px;
+      margin-right:10px;
+      width:33%;
+      flex-wrap: wrap;
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      &__icon{
+        display: none;
+      }
+    }
+  }
+}
+@include tabletL{
+  .warehouseList{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 24px;
+    border-bottom: 1px solid $text-label-style;
+    &:last-of-type{
+      border: none;
+    }
+    &__part--one{
+      width:25%;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top:24px;
+      margin-bottom: 32px;
+      &__info{
+        & h4{        
+          font-family: 'AvenirDemi';
+          color: $paragraph-text;
+          @include fontSize(16px, normal, 24px);
+          margin:0;
+        }
+        & p{        
+          font-family: 'AvenirNormal';
+          color: $paragraph-text;
+          @include fontSize(14px, normal, 22px);
+          margin:0;
+        }
+      }
+      &__icon{
+        display:none;
+        & a{
+          height:20px;
+          width: 20px;
+        }
+      }
+    }
+    &--align{
+      display: flex;
+      flex-flow: row nowrap;
+      width:75%;
+      margin-top:24px;
+      margin-bottom:24px;
+      justify-content: space-around;
+
+    }
+    &__part--two{
+      width:25%;;
+      
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirItalic';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--three{
+      width:25%;
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--four{
+      margin-right:10px;
+      width:25%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      &__icon{
+        margin-top: 5px;
+        & a{
+          height:18px;
+          width: 11px;
+        }
+      }
+    }
+  }
+}
+@include desktop{
+  .warehouseList{
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 0 180px;
+    border-bottom: 1px solid $text-label-style;
+    &:last-of-type{
+      border: none;
+    }
+    &__part--one{
+      width:25%;
+      display:flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top:24px;
+      margin-bottom: 32px;
+      &__info{
+        & h4{        
+          font-family: 'AvenirDemi';
+          color: $paragraph-text;
+          @include fontSize(16px, normal, 24px);
+          margin:0;
+        }
+        & p{        
+          font-family: 'AvenirNormal';
+          color: $paragraph-text;
+          @include fontSize(14px, normal, 22px);
+          margin:0;
+        }
+      }
+      &__icon{
+        display:none;
+        & a{
+          height:20px;
+          width: 20px;
+        }
+      }
+    }
+    &--align{
+      display: flex;
+      flex-flow: row nowrap;
+      width:75%;
+      margin-top:24px;
+      margin-bottom:24px;
+      justify-content: space-around;
+
+    }
+    &__part--two{
+      width:25%;;
+      
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirItalic';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--three{
+      width:25%;
+      & h3{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+    }
+    &__part--four{
+      margin-right:10px;
+      width:25%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      & p{
+        font-family: 'AvenirNormal';
+        color: $paragraph-text;
+        @include fontSize(14px, normal, 22px);
+        margin:0;
+      }
+      &__icon{
+        margin-top: 5px;
+        margin-left: 5px;
+        & a{
+          height:18px;
+          width: 11px;
+        }
+      }
+    }
+  }
+}
