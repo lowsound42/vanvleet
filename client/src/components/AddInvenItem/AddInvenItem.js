@@ -2,6 +2,7 @@ import React from "react";
 import Switch from "react-switch";
 import Modal from 'react-modal';
 import AddInvenModal from "./AddInvenModal"
+import './AddInvenItem.scss';
 
 
 Modal.setAppElement('#root')
@@ -21,14 +22,9 @@ handleCloseModal= () => {
         <div>
             <button onClick={this.handleOpenModal}><img src="../../assets/Icons/SVG/Icon-add.svg"/></button>
             <Modal 
-            style={{
-                overlay: {
-
-                },
-                content: {
-
-                }
-            }}
+            className="content" 
+            overlayClassName="overlay"
+           
             isOpen={this.state.showModal}
             contentLabel="add new inventory modal"
             onRequestClose={this.handleCloseModal}

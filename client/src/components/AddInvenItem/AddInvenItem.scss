@@ -1,0 +1,36 @@
+.content {
+    display: flex;
+    flex-direction: column;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 0px;
+}
+
+.overlay {
+     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+ @media screen and (min-width:768px) {
+     .content{
+    width: 576px;
+    height: 624px;
+    margin: auto;
+     }
+     .overlay {
+         margin: auto;
+     }
+  }
