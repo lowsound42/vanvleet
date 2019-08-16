@@ -1,87 +1,36 @@
-@import "../scss/fonts.scss";
-
-.add-inventory-item-form {
-    box-sizing: border-box;
-    width: 100%;
-    padding-left: 16px;
-    padding-right: 16px;
-    padding-top: 32px;
-    &__title {
-        margin-bottom: 32px;
-        font-size: 30px;
-         font-family: 'AvenirBold';
-    }
-    &__wrapper {
-        &__input-box {
-            &__text {
-                font-family: 'AvenirDemi';
-                font-weight: 700;
-                color: #AFAFAF;
-                margin-bottom: 8px;
-                margin-top: 24px;
-            }
-            &__input-text {
-                font-family: 'AvenirNormal' ;
-                font-size: 20px;
-                padding-left: 16px;
-                padding-right: 16px;
-                height: 48px;
-                width: 255px;
-                border: 1px solid #E1E1E1;
-                border-radius: 4px;
-                background-color: #FAFAFA;
-            }
-            &__input-text--select {
-                padding-left: 16px;
-                font-size: 20px;
-                font-family: 'AvenirNormal';
-                height: 48px;
-                width: 288px;
-                 border: 1px solid #E1E1E1;
-                 background-color: #FAFAFA;
-                  border-radius: 4px;
-            }
-            &__input-text::placeholder {
-                color: black;
-            }
-            &__label {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-                &__text {
-                    font-size: 20px;
-                }
-            }
-            &__textarea {
-                font-family: 'AvenirNormal' ;
-                font-size: 20px;
-                height: 80px;
-                width: 280px;
-                border: 1px solid #E1E1E1;
-                border-radius: 4px;
-                resize: none;
-            }
-            &__textarea::placeholder {
-                color: black;
-                font-size: 20px;
-                font-family: 'AvenirNormal' ;
-            }
-        }
-    }
-    &__button-wrapper {
-        margin-top: 32px;
-        &__save {
-            width: 285px;
-            background-color: #002F5F;
-            color: white;
-            border-radius: 4px;
-        }
-        &__cancel {
-            width: 285px;
-            background-color: white;
-            color: #002F5F;
-            border-radius: 4px;
-        }
-    }
+.content {
+    display: flex;
+    flex-direction: column;
+  position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border: 1px solid #ccc;
+    background: #fff;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 4px;
+    outline: none;
+    padding: 0px;
 }
+
+.overlay {
+     position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+ @media screen and (min-width:768px) {
+     .content{
+    width: 576px;
+    height: 624px;
+    margin: auto;
+     }
+     .overlay {
+         margin: auto;
+     }
+  }
