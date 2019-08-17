@@ -3,8 +3,22 @@
 @import '../scss/template.scss';
 
 .location{
+  
   margin:0 16px;
+  &__details{
+    &--info{
+      margin-bottom: 0;
+    }
+  }
   h1{
     font-family: 'AvenirBold';
+  }
+  h4{
+    color: $text-label-style;
+  }
+  p{
+    display: flex;
+    font-size: 13px;
+    font-family: 'Avenir';
   }
 }
