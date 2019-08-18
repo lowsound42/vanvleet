@@ -16,17 +16,18 @@
 }
 
 .overlay {
+    
      position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(0, 0, 0, 0.75);
 }
 
  @media screen and (min-width:768px) {
      .content{
-    width: 576px;
+    width: 600px;
     height: 624px;
     margin: auto;
      }

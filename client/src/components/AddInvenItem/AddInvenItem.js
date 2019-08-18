@@ -24,13 +24,11 @@ handleCloseModal= () => {
             <Modal 
             className="content" 
             overlayClassName="overlay"
-           
             isOpen={this.state.showModal}
             contentLabel="add new inventory modal"
             onRequestClose={this.handleCloseModal}
-            shouldCloseOnOverlayClick={false}
+            shouldCloseOnOverlayClick={true}
             >
-
             <AddInvenModal />
             </Modal>
         </div>
