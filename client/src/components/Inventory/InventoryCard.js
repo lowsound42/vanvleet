@@ -39,7 +39,6 @@ class InventoryCard extends React.Component {
             <div className="InventoryCard__container__button">
               <img src={KebabIcon} onClick={this.OnKebabClick}/>
             </div>
-           
           </div>
         </div>
       </>
