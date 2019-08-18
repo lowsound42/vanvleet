@@ -19,7 +19,7 @@ handleCloseModal= () => {
     render() {
         return (
         <div>
-            <button className="button" onClick={this.handleOpenModal}><img className="button__logo-img" src={LogoImg}/></button>
+            <button className="button" onClick={this.handleOpenModal}><img className="button__logo-img" alt="logo-img" src={LogoImg}/></button>
             <Modal 
             className="content" 
             overlayClassName="overlay"
