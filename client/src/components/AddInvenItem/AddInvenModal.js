@@ -1,29 +1,38 @@
 import React from "react"
-import Switch from "react-switch";
 import "./AddInvenModal.scss";
+import InvenSwitch from "./InvenSwitch";
+import axios from "axios";
 
-class Modal extends React.Component {
-    state = { checked : false }
+class AddInvenModal extends React.Component {
 
-    handleChange = (checked) => {
-        this.setState({ checked });
-    }
+sendInvenToServer= event => {
+    console.log(event.target.itemDescription.value);
+    axios.post('http://localhost:8080/inventory', {
+        name : event.target.itemName.value,
+        lastOrdered : event.target.orderDate.value,
+        location: event.target.cityName.value,
+        quantity: event.target.itemQuantity.value,
+        description: event.target.itemDescription.value,
+        // isInstock: event.target.itemInstock.value
+    }); 
+}
+
     render () {
         return (
-                <form className="add-inventory-item-form" name="newInventoryForm" onsubmit="" method="post">
+                <form className="add-inventory-item-form" name="newInventoryForm" onSubmit={this.sendInvenToServer}>
             <div className="add-inventory-item-form__title">Create New</div>
             <div className="add-inventory-item-form__wrapper">
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">PRODUCT</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="Item Name" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="itemName" placeholder="Item Name" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">LAST ORDERED</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="yyyy-mm-dd" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="orderDate" placeholder="yyyy-mm-dd" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">CITY</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="City" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="cityName" placeholder="City" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">COUNTRY</div>
@@ -34,22 +43,22 @@ class Modal extends React.Component {
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">QUANTITY</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="0" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name ="itemQuantity" placeholder="0" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">STATUS</div>
                     <label className="add-inventory-item-form__wrapper__input-box__label">
                     <div className="add-inventory-item-form__wrapper__input-box__label__text">In Stock</div>
-                    <Switch checkedIcon={false} uncheckedIcon={false} onChange={this.handleChange} checked={this.state.checked}/>
+                   < InvenSwitch name="itemInstock"/>
                     </label>
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">ITEM DESCRIPTION</div>
-                    <textarea className="add-inventory-item-form__wrapper__input-box__textarea" placeholder="(Optional)"/>
+                    <textarea className="add-inventory-item-form__wrapper__input-box__textarea" name="itemDescription" placeholder="(Optional)"/>
                 </div>
             </div>
             <div className = "add-inventory-item-form__button-wrapper">
-            <button className = "add-inventory-item-form__button-wrapper__save">SAVE</button>
+            <button type="submit" className = "add-inventory-item-form__button-wrapper__save">SAVE</button>
             <button className = "add-inventory-item-form__button-wrapper__cancel">CANCEL</button>
             </div>
             </form>
@@ -57,4 +66,4 @@ class Modal extends React.Component {
     }
 }
 
-export default Modal;
+export default AddInvenModal;
