@@ -15,9 +15,6 @@ handleOpenModal = () => {
 handleCloseModal= () => {
     this.setState({ showModal: false});
 }
-validateForm = () => {
-
-}
 
     render() {
         return (

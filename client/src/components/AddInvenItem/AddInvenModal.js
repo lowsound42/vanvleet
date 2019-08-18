@@ -1,16 +1,21 @@
 import React from "react"
-import Switch from "react-switch";
+
+import ReactDOM from 'react-dom';
 import "./AddInvenModal.scss";
+import InvenSwitch from "./InvenSwitch";
 
 class AddInvenModal extends React.Component {
-    state = { checked : false }
-
-    handleChange = (checked) => {
-        this.setState({ checked });
+ 
+    validateForm = () => {
+        if (ReactDOM.newInventoryForm.itemName.value == "" ) {
+            alert ( "Please provide your name!" );
+            ReactDOM.newInventoryForm.itemName.focus();
+            return false;
+        }
     }
     render () {
         return (
-                <form className="add-inventory-item-form" name="newInventoryForm" onSubmit="" method="post">
+                <form className="add-inventory-item-form" name="newInventoryForm" onSubmit={this.validateForm} method="post">
             <div className="add-inventory-item-form__title">Create New</div>
             <div className="add-inventory-item-form__wrapper">
                 <div className="add-inventory-item-form__wrapper__input-box">
@@ -40,7 +45,7 @@ class AddInvenModal extends React.Component {
                     <div className="add-inventory-item-form__wrapper__input-box__text">STATUS</div>
                     <label className="add-inventory-item-form__wrapper__input-box__label">
                     <div className="add-inventory-item-form__wrapper__input-box__label__text">In Stock</div>
-                    <Switch checkedIcon={false} uncheckedIcon={false} onChange={this.handleChange} checked={this.state.checked}/>
+                   < InvenSwitch />
                     </label>
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
