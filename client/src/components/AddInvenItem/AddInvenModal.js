@@ -15,15 +15,15 @@ class Modal extends React.Component {
             <div className="add-inventory-item-form__wrapper">
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">PRODUCT</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="Item Name" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="itemName" placeholder="Item Name" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">LAST ORDERED</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="yyyy-mm-dd" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="orderDate" placeholder="yyyy-mm-dd" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">CITY</div>
-                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" placeholder="City" />
+                    <input className="add-inventory-item-form__wrapper__input-box__input-text" type="text" name="cityName" placeholder="City" />
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">
                     <div className="add-inventory-item-form__wrapper__input-box__text">COUNTRY</div>
