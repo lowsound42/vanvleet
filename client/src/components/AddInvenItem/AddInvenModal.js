@@ -10,7 +10,7 @@ class Modal extends React.Component {
     }
     render () {
         return (
-                <form className="add-inventory-item-form">
+                <form className="add-inventory-item-form" name="newInventoryForm" onsubmit="" method="post">
             <div className="add-inventory-item-form__title">Create New</div>
             <div className="add-inventory-item-form__wrapper">
                 <div className="add-inventory-item-form__wrapper__input-box">
@@ -40,7 +40,7 @@ class Modal extends React.Component {
                     <div className="add-inventory-item-form__wrapper__input-box__text">STATUS</div>
                     <label className="add-inventory-item-form__wrapper__input-box__label">
                     <div className="add-inventory-item-form__wrapper__input-box__label__text">In Stock</div>
-                    <Switch checkedIcon={false} uncheckedIcon={false} onChange={this.handle} checked={this.state.checked}/>
+                    <Switch checkedIcon={false} uncheckedIcon={false} onChange={this.handleChange} checked={this.state.checked}/>
                     </label>
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">

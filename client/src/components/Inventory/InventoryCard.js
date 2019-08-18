@@ -1,6 +1,8 @@
 import React from 'react';
 import KebabIcon from '../../Assets/Icons/SVG/Icon-kebab-default.svg';
 import './Inventory.scss';
+import InventoryKebabMenu from './InventoryKebabMenu';
+
 class InventoryCard extends React.Component {
   state = {
     Kebab : false
@@ -40,6 +42,9 @@ class InventoryCard extends React.Component {
               <img src={KebabIcon} onClick={this.OnKebabClick}/>
             </div>
           </div>
+              <InventoryKebabMenu Kebab={this.state.Kebab}  />
+            </td>
+          </table>
         </div>
       </>
     )}
