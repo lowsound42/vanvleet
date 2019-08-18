@@ -1,6 +1,7 @@
 import React from 'react';
 import KebabIcon from '../../Assets/Icons/SVG/Icon-kebab-default.svg';
 import InventoryKebabMenu from './InventoryKebabMenu';
+import { Link } from "react-router-dom";
 
 import './Inventory.scss';
 class InventoryCard extends React.Component {
@@ -8,6 +9,7 @@ class InventoryCard extends React.Component {
     return(
       <>
       <div className="InventoryCard">
+        <Link to={`/inventory/${this.props.id}`}>  
           <div className="InventoryCard__container">
             
             <label className="InventoryCard__container__labelOne">ITEM</label>
@@ -27,7 +29,8 @@ class InventoryCard extends React.Component {
               <InventoryKebabMenu />
             </div>
           </div>
-        </div>
+          </Link>  
+      </div>
       </>
     )}
 }
