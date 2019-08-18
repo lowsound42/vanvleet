@@ -2,6 +2,33 @@
 @import "../scss/template.scss";
 @import "../scss/variables.scss";
 
+.InventoryKebabMenu__On {
+  display: block;
+  position: absolute;
+  margin-top: 10px;
+  right: -10px;
+  border: 1px solid $text-field-border;
+  width: 161px;
+  height: 44px;
+  background-color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+  & p {
+  padding-left: 15px;
+  margin: 12px 0 0 0;
+  }
+}
+.InventoryKebabMenu__Off {
+  display: none;
+}
+
+.InventoryKebabMenu {
+  &__Icon {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
 @include mobile {
   .Inventory__Header {
     margin: 0 16px;
@@ -322,8 +349,8 @@
       color: $paragraph-text;
       margin: 5px 0;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--three {
       width: 17.5%;
@@ -332,8 +359,8 @@
       color: $paragraph-text;
       margin: 5px 0;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--four {
       width: 17.5%;
@@ -342,15 +369,15 @@
       color: $paragraph-text;
       margin: 5px 0 5px 15px;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--five {
       width: 17.5%;
       @include fontSize(14px, normal, 22px);
       font-family: "AvenirNormal";
       color: $paragraph-text;
-      margin: 5px 0  5px 0;
+      margin: 5px 0 5px 0;
       text-overflow: ellipsis;
       overflow: hidden;
     }
@@ -384,13 +411,12 @@
       &--one {
         padding-left: 40px;
         display: flex;
-
       }
       &--two {
         padding-right: 100px;
       }
       &--three {
-        padding-right:40px;
+        padding-right: 40px;
       }
     }
     &__labelThree {
@@ -472,8 +498,8 @@
       color: $paragraph-text;
       margin: 5px 0;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--three {
       width: 17.5%;
@@ -482,8 +508,8 @@
       color: $paragraph-text;
       margin: 5px 0;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--four {
       width: 17.5%;
@@ -492,15 +518,15 @@
       color: $paragraph-text;
       margin: 5px 0 5px 15px;
       text-overflow: ellipsis;
-      justify-content:center;
-      display:flex;
+      justify-content: center;
+      display: flex;
     }
     &--five {
       width: 17.5%;
       @include fontSize(14px, normal, 22px);
       font-family: "AvenirNormal";
       color: $paragraph-text;
-      margin: 5px 0  5px 0;
+      margin: 5px 0 5px 0;
       text-overflow: ellipsis;
       overflow: hidden;
     }
@@ -533,14 +559,12 @@
       padding-left: 80px;
       &--one {
         padding-left: 55px;
-        
-
       }
       &--two {
         padding-right: 105px;
       }
       &--three {
-        padding-right:50px;
+        padding-right: 50px;
       }
     }
     &__labelThree {
@@ -552,4 +576,3 @@
     }
   }
 }
-

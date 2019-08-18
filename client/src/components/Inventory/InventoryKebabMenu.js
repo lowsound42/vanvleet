@@ -1,7 +1,7 @@
 import React from 'react';
 import KebabIcon from '../../Assets/Icons/SVG/Icon-kebab-default.svg';
 import './Inventory.scss';
-import './TestStyling.scss';
+
 class InventoryKebabMenu extends React.Component {
   state = {
     isKebabOn : false
@@ -21,8 +21,8 @@ class InventoryKebabMenu extends React.Component {
   render(){
     return(
       <>
-        <div className="IventoryKebabMenu">
-          <div className="IventoryKebabMenu__Icon"
+        <div className="InventoryKebabMenu">
+          <div className="InventoryKebabMenu__Icon"
             onClick={this.ShowKebabMenu}>
             <img src={KebabIcon} alt="Item Menu" />
           </div>
