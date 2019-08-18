@@ -3,10 +3,17 @@ import "./AddInvenModal.scss";
 import InvenSwitch from "./InvenSwitch";
 import axios from "axios";
 
-class AddInvenModal extends React.Component {
+class AddInvenModalForm extends React.Component {
+    state = {
+        name : "",
+        lastOrdered:"",
+        location:"",
+        quantity: "",
+        description: ""
+    }
 
 sendInvenToServer= event => {
-    console.log(event.target.itemDescription.value);
+    // console.log(event.target.itemDescription.value);
     axios.post('http://localhost:8080/inventory', {
         name : event.target.itemName.value,
         lastOrdered : event.target.orderDate.value,
@@ -66,4 +73,4 @@ sendInvenToServer= event => {
     }
 }
 
-export default AddInvenModal;
+export default AddInvenModalForm;
