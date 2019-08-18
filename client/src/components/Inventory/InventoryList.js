@@ -20,6 +20,7 @@ class InventoryList extends React.Component {
         {inventoryItems.map(inventoryItems => (
           <InventoryCard
             key={inventoryItems.id}
+            id={inventoryItems.id}
             description={inventoryItems.description}
             name={inventoryItems.name}
             lastOrdered={inventoryItems.lastOrdered}
