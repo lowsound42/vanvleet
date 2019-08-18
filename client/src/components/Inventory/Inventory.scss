@@ -1,0 +1,555 @@
+@import "../scss/fonts.scss";
+@import "../scss/template.scss";
+@import "../scss/variables.scss";
+
+@include mobile {
+  .Inventory__Header {
+    margin: 0 16px;
+
+    &__Title {
+      & h1 {
+        @include fontSize(24px, normal, 32px);
+        font-family: "AvenirBold";
+        margin: 32px 0 0 0;
+        color: $paragraph-text;
+      }
+    }
+
+    &__SearchBar {
+      & input {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        width: 260px;
+        height: 40px;
+        background-image: url("./Icons/SVG/Icon-search.svg");
+        background-repeat: no-repeat;
+        background-color: $text-field-background-fill;
+        background-position: 10px;
+        padding: 0 0 0 30px;
+        border-radius: 5px;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .InventoryCard__container {
+    margin: 0 16px 30px 16px;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $text-field-border;
+    &__labelOne {
+      @include fontSize(12px, normal, 20px);
+      color: $text-label-style;
+      font-family: "AvenirBold";
+      margin: 0 0 16px 0;
+    }
+    &__labelTwo {
+      @include fontSize(12px, normal, 20px);
+      color: $text-label-style;
+      font-family: "AvenirBold";
+      margin: 0 0 16px 0;
+    }
+    &__labelThree {
+      @include fontSize(12px, normal, 20px);
+      color: $text-label-style;
+      font-family: "AvenirBold";
+      margin: 0 0 16px 0;
+    }
+    &__labelFour {
+      @include fontSize(12px, normal, 20px);
+      color: $text-label-style;
+      font-family: "AvenirBold";
+      margin: 0 0 16px 0;
+    }
+    &__labelFive {
+      @include fontSize(12px, normal, 20px);
+      color: $text-label-style;
+      font-family: "AvenirBold";
+      margin: 0 0 16px 0;
+    }
+    &--one {
+      & h2 {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirDemi";
+        color: $paragraph-text;
+        margin: 0;
+      }
+      & p {
+        margin: 16px 0 24px 0;
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirNormal";
+      }
+    }
+    &--two {
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+    }
+    &--three {
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+    }
+    &--four {
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+    }
+    &--five {
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0 15px 0;
+    }
+
+    &__button {
+      position: absolute;
+      right: 20px;
+    }
+  }
+
+  .InventoryList__Headers {
+    display: none;
+  }
+}
+@include tablet {
+  .Inventory__Header {
+    margin: 0 16px;
+
+    &__Title {
+      & h1 {
+        @include fontSize(24px, normal, 32px);
+        font-family: "AvenirBold";
+        margin: 32px 0 0 0;
+        color: $paragraph-text;
+      }
+    }
+
+    &__SearchBar {
+      & input {
+        margin-top: 16px;
+        margin-bottom: 32px;
+        width: 260px;
+        height: 40px;
+        background-image: url("./Icons/SVG/Icon-search.svg");
+        background-repeat: no-repeat;
+        background-color: $text-field-background-fill;
+        background-position: 10px;
+        padding: 0 0 0 30px;
+        border-radius: 5px;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .InventoryCard__container {
+    width: 720px;
+    height: 100px;
+    margin: 0 24px 30px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid $text-field-border;
+    overflow: hidden;
+    & label {
+      display: none;
+    }
+    &--one {
+      width: 25%;
+      & h2 {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirDemi";
+        color: $paragraph-text;
+        margin: 0;
+        text-overflow: ellipsis;
+      }
+      & p {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirNormal";
+        text-overflow: ellipsis;
+      }
+    }
+    &--two {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+    }
+    &--three {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+    }
+    &--four {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0 0 15px;
+      text-overflow: ellipsis;
+    }
+    &--five {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0 15px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &__button {
+      position: absolute;
+      right: 24px;
+    }
+  }
+
+  .InventoryList__Headers {
+    display: flex;
+    margin: 0 24px 16px 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    @include fontSize(13px, normal, 18px);
+
+    &__labelOne {
+      width: 20%;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+    &__labelTwo__container {
+      color: $text-field-border;
+      font-family: "AvenirBold";
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      width: 60%;
+      padding-left: 50px;
+      &--one {
+        padding-right: 32px;
+        padding-left: 5px;
+      }
+      &--two {
+        padding-right: 75px;
+      }
+    }
+    &__labelThree {
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 20px;
+      width: 20%;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+  }
+}
+@include tabletL {
+  .Inventory__Header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 24px;
+
+    &__Title {
+      & h1 {
+        @include fontSize(36px, normal, 48px);
+        font-family: "AvenirBold";
+        margin: 48px 0 48px 0;
+        color: $paragraph-text;
+      }
+    }
+
+    &__SearchBar {
+      & input {
+        margin-top: 40px;
+        margin-bottom: 32px;
+        width: 252px;
+        height: 48px;
+        background-image: url("./Icons/SVG/Icon-search.svg");
+        background-repeat: no-repeat;
+        background-color: $text-field-background-fill;
+        background-position: 10px;
+        padding: 0 0 0 38px;
+        border-radius: 5px;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .InventoryCard__container {
+    height: 80px;
+    margin: 0 24px 30px 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $text-field-border;
+    overflow: hidden;
+    & label {
+      display: none;
+    }
+    &--one {
+      width: 25%;
+      & h2 {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirDemi";
+        color: $paragraph-text;
+        margin: 0;
+        text-overflow: ellipsis;
+      }
+      & p {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirNormal";
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+      }
+    }
+    &--two {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--three {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--four {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0 5px 15px;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--five {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0  5px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &__button {
+      position: absolute;
+      right: 24px;
+    }
+  }
+
+  .InventoryList__Headers {
+    display: flex;
+    margin: 0 24px 0 24px;
+    flex-direction: row;
+    justify-content: space-between;
+    @include fontSize(13px, normal, 18px);
+
+    &__labelOne {
+      width: 20%;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+    &__labelTwo__container {
+      color: $text-field-border;
+      font-family: "AvenirBold";
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      padding-left: 80px;
+      &--one {
+        padding-left: 40px;
+        display: flex;
+
+      }
+      &--two {
+        padding-right: 100px;
+      }
+      &--three {
+        padding-right:40px;
+      }
+    }
+    &__labelThree {
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 123px;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+  }
+}
+@include desktop {
+  .Inventory__Header {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 180px;
+
+    &__Title {
+      & h1 {
+        @include fontSize(36px, normal, 48px);
+        font-family: "AvenirBold";
+        margin: 48px 0 48px 0;
+        color: $paragraph-text;
+      }
+    }
+
+    &__SearchBar {
+      & input {
+        margin-top: 40px;
+        margin-bottom: 32px;
+        width: 252px;
+        height: 48px;
+        background-image: url("./Icons/SVG/Icon-search.svg");
+        background-repeat: no-repeat;
+        background-color: $text-field-background-fill;
+        background-position: 10px;
+        padding: 0 0 0 38px;
+        border-radius: 5px;
+        border: 1px solid $text-field-border;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  .InventoryCard__container {
+    height: 80px;
+    margin: 0 180px 30px 180px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $text-field-border;
+    overflow: hidden;
+    & label {
+      display: none;
+    }
+    &--one {
+      width: 25%;
+      & h2 {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirDemi";
+        color: $paragraph-text;
+        margin: 0;
+        text-overflow: ellipsis;
+      }
+      & p {
+        @include fontSize(14px, normal, 22px);
+        font-family: "AvenirNormal";
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+      }
+    }
+    &--two {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--three {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--four {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0 5px 15px;
+      text-overflow: ellipsis;
+      justify-content:center;
+      display:flex;
+    }
+    &--five {
+      width: 17.5%;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirNormal";
+      color: $paragraph-text;
+      margin: 5px 0  5px 0;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &__button {
+      position: absolute;
+      right: 190px;
+    }
+  }
+
+  .InventoryList__Headers {
+    display: flex;
+    margin: 0 180px;
+    flex-direction: row;
+    justify-content: space-between;
+    @include fontSize(13px, normal, 18px);
+
+    &__labelOne {
+      width: 20%;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+    &__labelTwo__container {
+      color: $text-field-border;
+      font-family: "AvenirBold";
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 60%;
+      padding-left: 80px;
+      &--one {
+        padding-left: 55px;
+        
+
+      }
+      &--two {
+        padding-right: 105px;
+      }
+      &--three {
+        padding-right:50px;
+      }
+    }
+    &__labelThree {
+      display: flex;
+      justify-content: flex-start;
+      padding-right: 140px;
+      color: $text-field-border;
+      font-family: "AvenirBold";
+    }
+  }
+}
+

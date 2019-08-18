@@ -38,19 +38,32 @@ class LocationId extends React.Component{
         <div className='location__details'>
           <h1 className='location__details--header1'>
           <Link to="/warehouses"><img src={arrowback}/></Link> {this.state.items.name}</h1>
-          <h4 className='location__details--header'>ADDRESS</h4>
-          <p className='location__details--info'>{this.state.address.street}</p>
-          <p className='location__details--info'>{this.state.address.suiteNum}</p>
-          <p className='location__details--info'>{this.state.address.city},{this.state.address.province}</p>
-          <p className='location__details--info'>{this.state.address.postal}  CA</p>
+          <div className='location__details--rows'>
+          <div className='location__details--columns'>
+            <h4 className='location__details--header'>ADDRESS</h4>
+            <div className='location__details--div'>
+              <p className='location__details--info'>{this.state.address.street}</p>
+              <p className='location__details--info'>{this.state.address.suiteNum}</p>
+            </div>
+          <div className='location__details--div'>
+            <p className='location__details--info'>{this.state.address.city},{this.state.address.province}</p>
+            <p className='location__details--info'>{this.state.address.postal}  CA</p>
+          </div>
+          </div>
+          <div className='location__details--columns1'>
           <h4 className='location__details--header'>CONTACT</h4>
-          <div>
+          <div className='location__details--div'>
             <p className='location__details--info'>{this.state.contact.name} </p>
             <p className='location__details--info'>{this.state.contact.title}</p>
           </div>
-          <p className='location__details--info'>+ {this.state.contact.phone}</p> 
-          <p className='location__details--info'> {this.state.contact.email}</p>
+          <div className='location__details--div'>
+            <p className='location__details--info'>+ {this.state.contact.phone}</p> 
+            <p className='location__details--info'> {this.state.contact.email}</p>
+          </div>
         </div>
+          </div>
+          
+      </div>
     </div>
       </>
     )
