@@ -2,7 +2,7 @@ import React from "react"
 import Switch from "react-switch";
 import "./AddInvenModal.scss";
 
-class Modal extends React.Component {
+class AddInvenModal extends React.Component {
     state = { checked : false }
 
     handleChange = (checked) => {
@@ -57,4 +57,4 @@ class Modal extends React.Component {
     }
 }
 
-export default Modal;
+export default AddInvenModal;

@@ -1,8 +1,8 @@
 import React from "react";
-import Switch from "react-switch";
 import Modal from 'react-modal';
 import AddInvenModal from "./AddInvenModal"
 import './AddInvenItem.scss';
+import LogoImg from "../../Assets/Icons/SVG/Icon-add.svg";
 
 
 Modal.setAppElement('#root')
@@ -22,7 +22,7 @@ validateForm = () => {
     render() {
         return (
         <div>
-            <button onClick={this.handleOpenModal}><img src="../../assets/Icons/SVG/Icon-add.svg"/></button>
+            <button className="button" onClick={this.handleOpenModal}><img className="button__logo-img" src={LogoImg}/></button>
             <Modal 
             className="content" 
             overlayClassName="overlay"
