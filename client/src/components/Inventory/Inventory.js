@@ -27,7 +27,6 @@ class Inventory extends React.Component {
     return(
       <>
         <NavBar />
-        <p>{this.testVar}</p>
         <InventoryHeader />
         <InventoryList inventoryItems={this.state.inventoryItems} />
         <AddInvenItem />
