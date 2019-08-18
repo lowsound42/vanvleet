@@ -8,6 +8,10 @@
   align-items: space-between;
   background-color: $navigation-backround-fill;
   height: 80px;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
   &__img-wrapper {
     display: flex;
     flex-direction: row;
@@ -47,6 +51,7 @@
     justify-content: flex-start;
     align-items: center;
     height: 80px;
+    color:white;
     &__img-wrapper {
       margin-top: 0px;
     }
