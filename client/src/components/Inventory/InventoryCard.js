@@ -4,21 +4,6 @@ import InventoryKebabMenu from './InventoryKebabMenu';
 
 import './Inventory.scss';
 class InventoryCard extends React.Component {
-  state = {
-    Kebab : false
-  }
-  OnKebabClick = () => {
-    if (this.state.Kebab === false) {
-      this.setState({
-        Kebab : true
-      })
-    } else {
-      this.setState({
-        Kebab : false
-      })
-    }
-    console.log(this.state.Kebab);
-  }
   render(){
     return(
       <>
@@ -39,8 +24,7 @@ class InventoryCard extends React.Component {
             <label className="InventoryCard__container__labelFive">STATUS</label>
             <div className="InventoryCard__container--five">{this.props.isInstock ? 'In Stock' : 'Out of Stock'}</div>
             <div className="InventoryCard__container__button">
-              <img src={KebabIcon} onClick={this.OnKebabClick}/>
-              <InventoryKebabMenu Kebab={this.state.Kebab}  />
+              <InventoryKebabMenu />
             </div>
           </div>
         </div>

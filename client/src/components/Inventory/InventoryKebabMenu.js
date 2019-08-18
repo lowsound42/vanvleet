@@ -1,19 +1,35 @@
 import React from 'react';
-
+import KebabIcon from '../../Assets/Icons/SVG/Icon-kebab-default.svg';
+import './Inventory.scss';
+import './TestStyling.scss';
 class InventoryKebabMenu extends React.Component {
-  KebabMenu = () => {
-    if (this.props.Kebab === false) {
-      //display none
-      console.log("hide kebab");
-    } else {
-      //display on
-      console.log("show kebab");
-    }
+  state = {
+    isKebabOn : false
   }
+  ShowKebabMenu = () => {
+    this.setState({ isKebabOn : true }, () => {
+      document.addEventListener('click', this.HideKebabMenu);
+      console.log("Hello!");
+    });
+  }
+  HideKebabMenu = () => {
+    this.setState({ isKebabOn : false }, () => {
+      document.removeEventListener('click',this.HideKebabMenu);
+      console.log("Mello!");
+    });
+  } 
   render(){
     return(
       <>
-        {this.KebabMenu}
+        <div className="IventoryKebabMenu">
+          <div className="IventoryKebabMenu__Icon"
+            onClick={this.ShowKebabMenu}>
+            <img src={KebabIcon} alt="Item Menu" />
+          </div>
+          <div className={ this.state.isKebabOn ? "InventoryKebabMenu__On" : "InventoryKebabMenu__Off"}> 
+            <p>Remove</p>
+          </div>
+        </div>
       </>
     )}
 }
