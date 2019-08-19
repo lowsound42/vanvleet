@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const inventoryData = require('../data/inventory.json');
+var nanoid = require('nanoid')
 
 //express middleware config
 
@@ -21,6 +22,18 @@ router.post('/', (req, res) => {
     res.send('try again bro');
   } else {
     res.status(201);
+    // var object = {
+    // id: nanoid(),
+    // name: req.body.name,
+    // description: req.body.description,
+    // quantity: req.body.quantity,
+    // lastOrdered: req.body.lastOrdered,
+    // location: req.body.location,
+    // isInstock: false,
+    // "categories": "Crafts, Office supplies, Paper",
+    // "warehouseId": "W0"
+
+    // }
     inventoryData.push(req.body);
     res.json(inventoryData)
   }

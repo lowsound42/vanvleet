@@ -3,8 +3,8 @@ import Switch from "react-switch";
 class InvenSwitch extends React.Component {
     state = { checked : false }
 
-    handleChange = (checked) => {
-        this.setState({ checked });
+    handleChange = () => {
+        this.setState({ checked: true });
     }
 
     render () {
