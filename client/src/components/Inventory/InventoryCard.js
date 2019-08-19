@@ -8,7 +8,6 @@ class InventoryCard extends React.Component {
     return(
       <>
       <div className="InventoryCard">
-         
           <div className="InventoryCard__container">
             
             <label className="InventoryCard__container__labelOne">ITEM</label>
@@ -25,7 +24,9 @@ class InventoryCard extends React.Component {
             <label className="InventoryCard__container__labelFive">STATUS</label>
             <div className="InventoryCard__container--five">{this.props.isInstock ? 'In Stock' : 'Out of Stock'}</div>
             <div className="InventoryCard__container__button">
-              <InventoryKebabMenu />
+              <InventoryKebabMenu 
+                deleteInventoryItem={this.props.deleteInventoryItem}
+                id={this.props.id} />
             </div>
           </div>
           
