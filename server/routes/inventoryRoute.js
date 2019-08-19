@@ -16,7 +16,7 @@ router.get('/:id', (req, res) => {
 
 router.post('/', (req, res) => {
   console.log(req.body);
-  if ((req.body.name)===undefined || (req.body.city)===undefined || (req.body.quantity) === undefined){
+  if ((req.body.name)===undefined || (req.body.lastOrdered)===undefined || (req.body.quantity) === undefined || (req.body.location) === undefined){
     res.status(400);
     res.send('try again bro');
   } else {

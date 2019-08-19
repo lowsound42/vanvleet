@@ -16,14 +16,15 @@ sendInvenToServer= event => {
     event.preventDefault();
     this.validate();
     console.log(event.target.itemDescription.value);
-    axios.post('http://localhost:8080/', {
+    axios.post('http://localhost:8080/inventory', {
         name : event.target.itemName.value,
         lastOrdered : event.target.orderDate.value,
         location: event.target.cityName.value,
         quantity: event.target.itemQuantity.value,
         description: event.target.itemDescription.value,
         // isInstock: event.target.itemInstock.value
-    }); 
+    }).then(window.location.reload()
+    ); 
 }
 validate = (event) => {
     if (this.state.name.value === "") {
