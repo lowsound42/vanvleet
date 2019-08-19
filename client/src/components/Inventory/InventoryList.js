@@ -19,6 +19,7 @@ class InventoryList extends React.Component {
         </div>
         {inventoryItems.map(inventoryItems => (
           <InventoryCard
+            deleteInventoryItem={this.props.deleteInventoryItem}
             key={inventoryItems.id}
             id={inventoryItems.id}
             description={inventoryItems.description}
