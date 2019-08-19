@@ -1,6 +1,6 @@
 import React from "react";
 import Modal from 'react-modal';
-import AddInvenModal from "./AddInvenModal"
+import AddInvenModalForm from "./AddInvenModal"
 import './AddInvenItem.scss';
 import LogoImg from "../../Assets/Icons/SVG/Icon-add.svg";
 
@@ -28,7 +28,7 @@ handleCloseModal= () => {
             onRequestClose={this.handleCloseModal}
             shouldCloseOnOverlayClick={true}
             >
-            <AddInvenModal />
+            <AddInvenModalForm />
             </Modal>
         </div>
         );
