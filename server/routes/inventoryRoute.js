@@ -22,19 +22,16 @@ router.post('/', (req, res) => {
     res.send('try again bro');
   } else {
     res.status(201);
-    // var object = {
-    // id: nanoid(),
-    // name: req.body.name,
-    // description: req.body.description,
-    // quantity: req.body.quantity,
-    // lastOrdered: req.body.lastOrdered,
-    // location: req.body.location,
-    // isInstock: false,
-    // "categories": "Crafts, Office supplies, Paper",
-    // "warehouseId": "W0"
-
-    // }
-    inventoryData.push(req.body);
+    var object = {
+    id: nanoid(),
+    name: req.body.name,
+    description: req.body.description,
+    quantity: req.body.quantity,
+    lastOrdered: req.body.lastOrdered,
+    location: req.body.location,
+    isInstock: req.body.isInstock,
+    }
+    inventoryData.push(object);
     res.json(inventoryData)
   }
 })
