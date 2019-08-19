@@ -36,7 +36,12 @@
       justify-self: center;
       color: #afafaf;
     }
-    &__text:active {
+    // &__text:active {
+    //   border-bottom: 4px solid white;
+    //   color: white;
+    //   padding-bottom: 12px;
+    // }
+    &__text:hover {
       border-bottom: 4px solid white;
       color: white;
       padding-bottom: 12px;
@@ -69,7 +74,12 @@
         padding-bottom: 26px;
         border-bottom: 4px solid transparent;
       }
-      &__text:active {
+      // &__text:active {
+      //   border-bottom: 4px solid white;
+      //   color: white;
+      //   padding-bottom: 26px;
+      // }
+      &__text:hover {
         border-bottom: 4px solid white;
         color: white;
         padding-bottom: 26px;
