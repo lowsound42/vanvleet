@@ -3,8 +3,6 @@ import { BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './App.css';
 import Inventory from'./components/Inventory/Inventory.js';
 import MainPage from './components/MainPage/MainPage.js';
-import Locations from './components/Locations/Locations.js';
-import AddInvenItem from './components/AddInvenItem/AddInvenItem.js';
 import ProductSummary from './components/Inventory/ProductSummary.js'
 import LocationsId from './components/Locations/LocationsId';
 

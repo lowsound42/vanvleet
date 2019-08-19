@@ -1,0 +1,389 @@
+@import "../scss/fonts.scss";
+@import "../scss/template.scss";
+@import "../scss/variables.scss";
+
+@include mobile {
+  .instock {
+    margin-top: 15px;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .outOfStock {
+    margin-top: 15px;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    color: white;
+    background-color: grey;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .product {
+    margin: 0 16px;
+
+    & h4 {
+      color: $text-label-style;
+      font-family: 'AvenirBold';
+      @include fontSize(12px, normal, 18px);
+    }
+    & p{
+      color: $navigation-backround-fill;
+      @include fontSize(12px, normal, 18px);
+    }
+    &__button {
+      width: 288px;
+      height: 50px;
+      color: white;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirBold";
+      background-color: $primary-cta-text-linl;
+      border-radius: 4px;
+      border: none;
+      margin-top: 15px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      &__container {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+
+        &--img {
+          margin-right: 20px;
+        }
+        &--header {
+          & h2 {
+            margin: 0;
+            @include fontSize(24px, normal, 32px);
+            font-family: "AvenirBold";
+          }
+        }
+      }
+    }
+  }
+}
+@include tablet {
+  .instock {
+    position: absolute;
+    left: 280px;
+    margin-top: 30px;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .outOfStock {
+    position: absolute;
+    left: 280px;
+    margin-top: 30px;
+    width: 100px;
+    height: 25px;
+    border-radius: 3px;
+    color: white;
+    background-color: grey;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .align {
+    display: flex;
+    flex-flow: row wrap;
+  }
+  .product {
+    margin: 0 24px;
+
+    & h4 {
+      color: $text-label-style;
+      font-family: 'AvenirBold';
+      @include fontSize(12px, normal, 18px);
+    }
+    & p{
+      color: $navigation-backround-fill;
+      @include fontSize(12px, normal, 18px);
+    }
+    &__button {
+      width: 288px;
+      height: 50px;
+      color: white;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirBold";
+      background-color: $primary-cta-text-linl;
+      border-radius: 4px;
+      border: none;
+      margin-top: 30px;
+      position: absolute;
+      right:24px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      &__container {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1.5px solid $text-field-border;
+
+        &--img {
+          margin-right: 20px;
+        }
+        &--header {
+          & h2 {
+            margin: 0;
+            @include fontSize(24px, normal, 32px);
+            font-family: "AvenirBold";
+          }
+        }
+      }
+      &__ordered{
+        width:50%;
+      }
+      &__reference{
+        width:50%;
+      }
+      &__last{
+        width:50%;
+      }
+      &__location{
+        width:50%;
+      }
+      &__quantity{
+        width:100%;
+      }
+      &__categories{
+        width:100%;
+        padding: 0 0 25px 0;
+        border-bottom: 1.5px solid $text-field-border;
+      }
+    }
+  }
+}
+@include tabletL {
+  .instock {
+    position: absolute;
+    left: 280px;
+    margin-top: 30px;
+    width: 88px;
+    height: 24px;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .outOfStock {
+    position: absolute;
+    left: 280px;
+    margin-top: 30px;
+    width: 88px;
+    height: 24px;
+    border-radius: 3px;
+    color: white;
+    background-color: grey;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .align {
+    display: flex;
+    flex-flow: row wrap;
+    width:50%;
+    margin-left: 50px;
+  }
+  .desktopContainer--align{
+    display: flex;
+    border-bottom: 1.5px solid $text-field-border;
+
+    &__description{
+      width:50%;
+    }
+  }
+  .product {
+    margin: 0 24px;
+
+    & h4 {
+      color: $text-label-style;
+    }
+    &__button {
+      width: 160px;
+      height: 48px;
+      color: white;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirBold";
+      background-color: $primary-cta-text-linl;
+      border-radius: 4px;
+      border: none;
+      margin-top: 40px;
+      position: absolute;
+      right:24px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      &__container {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1.5px solid $text-label-style;
+
+        &--img {
+          margin-right: 20px;
+        }
+        &--header {
+          & h2 {
+            margin: 0;
+            @include fontSize(24px, normal, 32px);
+            font-family: "AvenirBold";
+          }
+        }
+      }
+      &__ordered{
+        width:50%;
+      }
+      &__reference{
+        width:50%;
+      }
+      &__last{
+        width:50%;
+      }
+      &__location{
+        width:50%;
+      }
+      &__quantity{
+        width:100%;
+      }
+      &__categories{
+        width:100%;
+        padding: 0 0 25px 0;
+      }
+    }
+  }
+}
+@include desktop {
+  .instock {
+    position: absolute;
+    left: 460px;
+    margin-top: 30px;
+    width: 88px;
+    height: 24px;
+    border-radius: 3px;
+    color: white;
+    background-color: green;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .outOfStock {
+    position: absolute;
+    left: 460px;
+    margin-top: 30px;
+    width: 88px;
+    height: 24px;
+    border-radius: 3px;
+    color: white;
+    background-color: grey;
+    @include fontSize(13px, normal, 18px);
+    font-family: "AvenirBold";
+    text-align: center;
+    padding-top: 5px;
+  }
+  .align {
+    display: flex;
+    flex-flow: row wrap;
+    width:50%;
+    margin-left: 50px;
+    margin-top:40px;
+  }
+  .desktopContainer--align{
+    display: flex;
+    border-bottom: 1.5px solid $text-field-border;
+
+    &__description{
+      width:50%;
+      margin-top:40px;
+    }
+  }
+  .product {
+    margin: 0 180px;
+
+    & h4 {
+      color: $text-label-style;
+    }
+    &__button {
+      width: 160px;
+      height: 48px;
+      color: white;
+      @include fontSize(14px, normal, 22px);
+      font-family: "AvenirBold";
+      background-color: $primary-cta-text-linl;
+      border-radius: 4px;
+      border: none;
+      margin-top: 40px;
+      position: absolute;
+      right:180px;
+    }
+    &__details {
+      display: flex;
+      flex-direction: column;
+      &__container {
+        margin-top: 30px;
+        padding-bottom: 20px;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 1.5px solid $text-label-style;
+
+        &--img {
+          margin-right: 20px;
+        }
+        &--header {
+          & h2 {
+            margin: 0;
+            @include fontSize(24px, normal, 32px);
+            font-family: "AvenirBold";
+          }
+        }
+      }
+      &__ordered{
+        width:50%;
+      }
+      &__reference{
+        width:50%;
+      }
+      &__last{
+        width:50%;
+      }
+      &__location{
+        width:50%;
+      }
+      &__quantity{
+        width:100%;
+      }
+      &__categories{
+        width:100%;
+        padding: 0 0 48px 0;
+
+      }
+    }
+  }
+}

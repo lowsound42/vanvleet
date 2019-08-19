@@ -3,7 +3,6 @@ import InventoryHeader from './InventoryHeader.js';
 import InventoryList from './InventoryList.js';
 //import DummyData from './DummyData.json';
 import axios from 'axios';
-import DummyData from './DummyData.json';
 import NavBar from '../NavBar/NavBar';
 import AddInvenItem from '../AddInvenItem/AddInvenItem';
 

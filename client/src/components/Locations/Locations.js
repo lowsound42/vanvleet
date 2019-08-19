@@ -1,5 +1,4 @@
 import React from "react";
-import NavBar from '../NavBar/NavBar';
 import arrowIcon from "./Icons/SVG/Icon-arrow-right.svg";
 import { Link } from "react-router-dom";
 import "./Locations.scss";
