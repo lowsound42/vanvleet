@@ -4,17 +4,16 @@ import InvenSwitch from "./InvenSwitch";
 import axios from "axios";
 
 class AddInvenModalForm extends React.Component {
-    state = {
-        name : "",
-        lastOrdered:"",
-        location:"",
-        quantity: "",
-        description: ""
-    }
+    // state = {
+    //     name : "",
+    //     lastOrdered:"",
+    //     location:"",
+    //     quantity: "",
+    //     description: ""
+    // }
 
 sendInvenToServer= event => {
     event.preventDefault();
-    this.validate();
     console.log(event.target.itemDescription.value);
     axios.post('http://localhost:8080/', {
         name : event.target.itemName.value,
@@ -25,12 +24,12 @@ sendInvenToServer= event => {
         // isInstock: event.target.itemInstock.value
     }); 
 }
-validate = (event) => {
-    if (this.state.name.value === "") {
-        console.log("validation is working")
-        return false;
-    }
-}
+// validate = (event) => {
+//     if (this.state.name.value === "") {
+//         console.log("validation is working")
+//         return false;
+//     }
+// }
     render () {
         return (
                 <form className="add-inventory-item-form" name="newInventoryForm" onSubmit={this.sendInvenToServer}>
