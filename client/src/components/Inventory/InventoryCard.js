@@ -1,5 +1,4 @@
 import React from 'react';
-import KebabIcon from '../../Assets/Icons/SVG/Icon-kebab-default.svg';
 import InventoryKebabMenu from './InventoryKebabMenu';
 import { Link } from "react-router-dom";
 

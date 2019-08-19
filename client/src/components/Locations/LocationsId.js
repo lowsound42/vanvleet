@@ -37,7 +37,7 @@ class LocationId extends React.Component{
       <div className='location'>
         <div className='location__details'>
           <h1 className='location__details--header1'>
-          <Link to="/warehouses"><img src={arrowback}/></Link> {this.state.items.name}</h1>
+          <Link to="/warehouses"><img src={arrowback} alt="arrow icon"/></Link> {this.state.items.name}</h1>
           <div className='location__details--rows'>
           <div className='location__details--columns'>
             <h4 className='location__details--header'>ADDRESS</h4>
