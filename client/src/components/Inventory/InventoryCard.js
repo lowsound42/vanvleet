@@ -8,12 +8,12 @@ class InventoryCard extends React.Component {
     return(
       <>
       <div className="InventoryCard">
-        <Link to={`/inventory/${this.props.id}`}>  
+         
           <div className="InventoryCard__container">
             
             <label className="InventoryCard__container__labelOne">ITEM</label>
             <div className="InventoryCard__container--one">
-            <h2>{this.props.name}</h2>
+            <h2><Link to={`/inventory/${this.props.id}`}> {this.props.name} </Link> </h2>
               <p>{this.props.description}</p>
               </div>
             <label className="InventoryCard__container__labelTwo">LAST ORDERED</label>
@@ -28,7 +28,7 @@ class InventoryCard extends React.Component {
               <InventoryKebabMenu />
             </div>
           </div>
-          </Link>  
+          
       </div>
       </>
     )}
