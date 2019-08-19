@@ -15,21 +15,19 @@ class AddInvenModalForm extends React.Component {
 sendInvenToServer= event => {
     event.preventDefault();
     console.log(event.target.itemDescription.value);
-    axios.post('http://localhost:8080/', {
+    if (event.target.itemName.value !== "" && event.target.orderDate !== "" && event.target.cityName.value !== "" && event.target.itemQuantity.value !== "") {
+    axios.post('http://localhost:8080/inventory', { 
+
         name : event.target.itemName.value,
         lastOrdered : event.target.orderDate.value,
         location: event.target.cityName.value,
         quantity: event.target.itemQuantity.value,
         description: event.target.itemDescription.value,
         // isInstock: event.target.itemInstock.value
-    }); 
+    }).then(window.location.reload()
+    ); } else {alert("please fill in the blank")}
 }
-// validate = (event) => {
-//     if (this.state.name.value === "") {
-//         console.log("validation is working")
-//         return false;
-//     }
-// }
+
     render () {
         return (
                 <form className="add-inventory-item-form" name="newInventoryForm" onSubmit={this.sendInvenToServer}>
