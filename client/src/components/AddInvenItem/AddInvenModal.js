@@ -27,7 +27,7 @@ sendInvenToServer= event => {
         quantity: event.target.itemQuantity.value,
         description: event.target.itemDescription.value,
         isInstock: this.state.checked
-     }).then(window.location.reload()
+    }).then(window.location.reload()
     ); } else {alert("please fill in the blank")}
 }
 
