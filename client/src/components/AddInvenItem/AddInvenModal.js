@@ -11,6 +11,15 @@ class AddInvenModalForm extends React.Component {
     //     quantity: "",
     //     description: ""
     // }
+    state = {
+        checked: false
+    }
+
+    updateSwitch = (val) => {
+        this.setState({
+            checked: val
+        })
+    }
 
 sendInvenToServer= event => {
     event.preventDefault();
@@ -23,7 +32,7 @@ sendInvenToServer= event => {
         location: event.target.cityName.value,
         quantity: event.target.itemQuantity.value,
         description: event.target.itemDescription.value,
-        // isInstock: event.target.itemInstock.value
+        isInstock: this.state.checked
     }).then(window.location.reload()
     ); } else {alert("please fill in the blank")}
 }
@@ -60,7 +69,7 @@ sendInvenToServer= event => {
                     <div className="add-inventory-item-form__wrapper__input-box__text">STATUS</div>
                     <label className="add-inventory-item-form__wrapper__input-box__label">
                     <div className="add-inventory-item-form__wrapper__input-box__label__text">In Stock</div>
-                   < InvenSwitch name="itemInstock"/>
+                   < InvenSwitch updateFunc={this.updateSwitch}/>
                     </label>
                 </div>
                 <div className="add-inventory-item-form__wrapper__input-box">

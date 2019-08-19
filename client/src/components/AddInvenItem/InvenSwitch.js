@@ -5,6 +5,7 @@ class InvenSwitch extends React.Component {
 
     handleChange = (checked) => {
         this.setState({ checked });
+        this.props.updateFunc(checked);
     }
 
     render () {
