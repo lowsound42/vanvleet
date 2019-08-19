@@ -28,7 +28,7 @@ handleCloseModal= () => {
             onRequestClose={this.handleCloseModal}
             shouldCloseOnOverlayClick={true}
             >
-            <AddInvenModalForm />
+            <AddInvenModalForm closeButton={this.handleCloseModal}/>
             </Modal>
         </div>
         );
