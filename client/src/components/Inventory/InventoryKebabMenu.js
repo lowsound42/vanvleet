@@ -26,7 +26,8 @@ class InventoryKebabMenu extends React.Component {
             onClick={this.ShowKebabMenu}>
             <img src={KebabIcon} alt="Item Menu" />
           </div>
-          <div className={ this.state.isKebabOn ? "InventoryKebabMenu__On" : "InventoryKebabMenu__Off"}> 
+          <div className={ this.state.isKebabOn ? "InventoryKebabMenu__On" : "InventoryKebabMenu__Off"}
+            onClick={() => {this.props.deleteInventoryItem(this.props.id)}}> 
             <p>Remove</p>
           </div>
         </div>
