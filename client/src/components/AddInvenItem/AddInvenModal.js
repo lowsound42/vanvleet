@@ -4,13 +4,7 @@ import InvenSwitch from "./InvenSwitch";
 import axios from "axios";
 
 class AddInvenModalForm extends React.Component {
-    // state = {
-    //     name : "",
-    //     lastOrdered:"",
-    //     location:"",
-    //     quantity: "",
-    //     description: ""
-    // }
+  
     state = {
         checked: false
     }
@@ -33,7 +27,7 @@ sendInvenToServer= event => {
         quantity: event.target.itemQuantity.value,
         description: event.target.itemDescription.value,
         isInstock: this.state.checked
-    }).then(window.location.reload()
+     }).then(window.location.reload()
     ); } else {alert("please fill in the blank")}
 }
 
@@ -79,7 +73,7 @@ sendInvenToServer= event => {
             </div>
             <div className = "add-inventory-item-form__button-wrapper">
             <button type="submit" className = "add-inventory-item-form__button-wrapper__save">SAVE</button>
-            <button className = "add-inventory-item-form__button-wrapper__cancel">CANCEL</button>
+            <button onClick={this.props.closeButton} className="add-inventory-item-form__button-wrapper__cancel">CANCEL</button>
             </div>
             </form>
         )
