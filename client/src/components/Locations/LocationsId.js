@@ -4,13 +4,14 @@ import NavBar from '../NavBar/NavBar';
 import arrowback from './Icons/SVG/Icon-back-arrow.svg';
 import {Link} from 'react-router-dom';
 import './LocationsId.scss';
-
+import InventoryKebabMenu from '../Inventory/InventoryKebabMenu';
 class LocationId extends React.Component{
 
   state= {
     items: {},
     address: {},
-    contact: {}
+    contact: {},
+    filtered: [{}]
   }
 
   componentDidMount(){
@@ -25,7 +26,20 @@ class LocationId extends React.Component{
       address: product.address,
       contact: product.contact
     });
-  })
+  }).then (
+    axios.get(`http://localhost:8080/inventory/`)
+    .then(response => {
+      console.log(response.data);
+      var filtered = response.data.filter(items => items.warehouseId == this.props.match.params.id);
+      console.log(filtered);
+      this.setState({
+        filtered:filtered
+
+      })
+    } 
+    )
+
+  )
  } 
 
 
@@ -61,11 +75,69 @@ class LocationId extends React.Component{
             <p className='location__details--info'> {this.state.contact.email}</p>
           </div>
         </div>
-          </div>
-          
       </div>
     </div>
-      </>
+  </div>
+  
+  <div className='inventory'>
+    { this.state.filtered.map(item => {
+      
+      return (<div key={item.id}>
+      <div className="kebab"><InventoryKebabMenu /></div>
+      <h4 className='inventory__header'>ITEM</h4>
+      <div className='inventory__div'>
+      <h3>{item.name}</h3>
+      <p>{item.description}</p>
+      </div>
+      <div>
+      <h4 className='inventory__header'>LAST ORDERED</h4>
+      <p className='inventory__container'>{item.lastOrdered}</p>
+      </div>
+      <div>
+      <h4 className='inventory__header'>LOCATION</h4>
+      <p className='inventory__container'>{item.location}</p>
+      </div>
+      <div>
+      <h4 className='inventory__header'>QUANTITY</h4>
+      <p className='inventory__container'>{item.quantity}</p>
+      </div>
+      <div>
+      <h4 className='inventory__header'>STATUS</h4>
+      <p className='inventory__container'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p>
+      </div>
+    </div>
+      )}
+    )} 
+  </div>
+  <div className='inventory1'>
+    
+      <div className='inventory1__row1'>
+      <h4 className='inventory1__row1__header1'>ITEM</h4>
+      <h4 className='inventory1__row1__header2'>LAST ORDERED</h4>
+      <h4 className='inventory1__row1__header3'>LOCATION</h4>
+      <h4 className='inventory1__row1__header4'>QUANTITY</h4>
+      <h4 className='inventory1__row1__header5'>STATUS</h4>
+      </div>
+      { this.state.filtered.map(item => {
+      return (<div key={item.id}>
+      <div className='inventory1__row1__div'>
+      <div className='inventory1__row1__div2'>
+      <h3>{item.name}</h3>
+      <p>{item.description}</p>
+      </div>
+      <div className='inventory1__row1__div'><p className='inventory1__container'>{item.lastOrdered}</p></div>
+      <div className='inventory1__row1__div'><p className='inventory1__container'>{item.location}</p></div>
+      <div className='inventory1__row1__div'><p className='inventory1__container'>{item.quantity}</p></div>
+      <div className='inventory1__row1__div'><p className='inventory1__container'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p></div>
+     <div className='inventory1__row1__div4'> <InventoryKebabMenu /> </div>
+      </div>
+
+      </div>
+ 
+      )}
+    )} 
+  </div>
+</>
     )
   }
 }
