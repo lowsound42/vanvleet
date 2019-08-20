@@ -9,13 +9,13 @@
     margin-right: 5px;
   }
   @include tablet{
-    margin: 0 50px;
+    margin: 0 30px;
   }
   @include tabletL{
     margin: 0 80px;
   }
   @include desktop{
-    margin: 0 180px;
+    margin: 0 165px;
   }
 
   &__details{
@@ -79,18 +79,32 @@
   }
   h4{
     color: $text-label-style;
+    @include desktop(){
+      font-size:18px;
+    }
   }
   p{
     display: flex;
     font-size: 14px;
     font-family: 'AvenirDemi';
+
+    @include desktop(){
+      font-size: 18px;
+    }
   }
 }
 
 
 .inventory{
-  margin: 0 48px;
+  background-color: #FAFAFA;
   background: width 100%; 
+  padding:0 48px;
+  padding-top: 2%;
+  &__container1{
+    border-bottom: 2px solid rgba(128,128,128,0.3);
+    padding-bottom: 8%;
+  }
+  
   @include tablet{
     display: none;
   }
@@ -112,7 +126,7 @@
   }
   .kebab{
     position: absolute;
-    right: 20px;
+    right: 30px;
   }
 
 }
@@ -124,6 +138,7 @@
     height: 100%;
     flex-direction: column;
     font-size: 12px;
+    padding: 0 24px;
     
 
   &__row1{
@@ -150,6 +165,10 @@
         text-overflow: ellipsis;
         
       }
+    &__div5{
+      border-bottom: 2px solid rgba(128,128,128,0.3);
+      padding-bottom: 8%;
+    }
     
     }
     &__div{
@@ -168,6 +187,7 @@
     height: 100%;
     flex-direction: column;
     font-size: 12px;
+    padding: 0 68px;
     
 
   &__row1{
@@ -180,6 +200,10 @@
 
     &__header1{
       width:20%;
+    }
+
+    &__header2{
+      margin-left:5%;
     }
     &__header5{
       margin-right: 2%;
@@ -201,6 +225,7 @@
       flex-direction: row;
      justify-content: space-between;
      margin: 0 24px;
+    
   
       }
     }
@@ -211,25 +236,23 @@
     height: 100%;
     flex-direction: column;
     font-size: 17px;
+    padding: 0 180px;
     
-
   &__row1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     width: 90%;
-    margin: 0 24px;
+   
     color:$text-label-style;
 
     &__header1{
-      width:20%;
+      width:10%;
     }
     &__header2{
-      margin-left:3%;
+      margin-left:17%;
     }
-    &__header5{
-      margin-right: 3%;
-    }
+    
     &__div2{
       display: flex;
       flex-direction: column;
@@ -246,8 +269,6 @@
       display: flex;
       flex-direction: row;
      justify-content: space-between;
-     margin: 0 24px;
-  
       }
     }
   }
