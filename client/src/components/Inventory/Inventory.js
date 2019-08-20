@@ -11,6 +11,7 @@ class Inventory extends React.Component {
     inventoryItems : [],
   }
   componentDidMount() {
+    
     axios.get('http://localhost:8080/inventory/')
     .then(response => {
       console.log(response);
