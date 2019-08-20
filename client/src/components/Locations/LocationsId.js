@@ -103,7 +103,7 @@ class LocationId extends React.Component{
       </div>
       <div>
       <h4 className='inventory__header'>STATUS</h4>
-      <p className='inventory__container'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p>
+      <p className='inventory__container1'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p>
       </div>
     </div>
       )}
@@ -128,7 +128,7 @@ class LocationId extends React.Component{
       <div className='inventory1__row1__div'><p className='inventory1__container'>{item.lastOrdered}</p></div>
       <div className='inventory1__row1__div'><p className='inventory1__container'>{item.location}</p></div>
       <div className='inventory1__row1__div'><p className='inventory1__container'>{item.quantity}</p></div>
-      <div className='inventory1__row1__div'><p className='inventory1__container'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p></div>
+      <div className='inventory1__row1__div5'><p className='inventory1__container'>{item.isInstock ? 'In Stock' : 'Out of Stock'}</p></div>
      <div className='inventory1__row1__div4'> <InventoryKebabMenu /> </div>
       </div>
 
